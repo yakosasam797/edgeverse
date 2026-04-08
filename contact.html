@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +9,39 @@
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/technology.css">
   <link rel="stylesheet" href="/css/contact.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230066FF'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700' font-size='18'>E</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230D9488'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700' font-size='18'>E</text></svg>">
 </head>
 <body>
 
+  <div class="nav-accent-bar"></div>
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo"><div class="nav__logo-mark">E</div>EdgeVerse</a>
+      <a href="index.html" class="nav__logo"><img src="/assets/images/edgeverse-logo.png" alt="EdgeVerse" class="nav__logo-img"></a>
       <div class="nav__links">
         <a href="index.html" class="nav__link">Home</a>
-        <a href="technology.html" class="nav__link">Technology</a>
-        <a href="industries.html" class="nav__link">Industries</a>
+        <div class="nav__item"><a href="technology.html" class="nav__link">Technology <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="technology.html#imedge">Imedge® Hardware<span class="dropdown-sub">AI Vision Processing Platform</span></a><a href="technology.html#perceiva">Perceiva™ Software<span class="dropdown-sub">Edge AI Perception Stack</span></a></div></div>
+        <div class="nav__item"><a href="industries.html" class="nav__link">Industries <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="industries.html">Safe & Secure Mobility<span class="dropdown-sub">Two-wheeler ARAS</span></a><a href="industries.html#surveillance">Smart Surveillance<span class="dropdown-sub">Edge-native security</span></a><a href="industries.html#automation">Industrial Automation<span class="dropdown-sub">Quality control & inspection</span></a></div></div>
         <a href="safety.html" class="nav__link">Safety</a>
         <a href="about.html" class="nav__link">About</a>
-        <a href="contact.html" class="btn btn--primary btn--sm nav__cta">Schedule a Call</a>
+        <a href="careers.html" class="nav__link">Careers</a>
       </div>
-      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn--outline-nav nav__cta">Schedule a Call</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
     <div class="nav__mobile">
       <a href="index.html">Home</a><a href="technology.html">Technology</a><a href="industries.html">Industries</a>
-      <a href="safety.html">Safety</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="safety.html">Safety</a><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </div>
   </nav>
 
   <!-- CONTACT HEADER -->
-  <section class="section section--spacious" style="padding-top:calc(72px + var(--space-5xl));">
+  <section class="section section--spacious" style="padding-top:calc(76px + var(--space-5xl));">
     <div class="container">
       <div class="section-header reveal" style="margin-bottom:var(--space-4xl);">
         <span class="section-header__label label">Contact</span>
@@ -129,12 +137,12 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <div class="footer__logo"><div class="footer__logo-mark">E</div>EdgeVerse</div>
+          <div class="footer__logo"><img src="/assets/images/edgeverse-logo.png" alt="EdgeVerse" class="footer__logo-img"></div>
           <p class="footer__desc">India's first ARAS platform — edge-native AI perception for safer mobility.</p>
         </div>
         <div><p class="footer__col-title">Platform</p><div class="footer__links"><a href="technology.html" class="footer__link">Technology</a><a href="technology.html#imedge" class="footer__link">Imedge® Hardware</a><a href="technology.html#perceiva" class="footer__link">Perceiva™ Software</a></div></div>
         <div><p class="footer__col-title">Industries</p><div class="footer__links"><a href="industries.html" class="footer__link">Safe Mobility</a><a href="industries.html#surveillance" class="footer__link">Surveillance</a><a href="industries.html#automation" class="footer__link">Automation & QC</a></div></div>
-        <div><p class="footer__col-title">Company</p><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="contact.html" class="footer__link">Contact</a><a href="mailto:contact@edgeverse.ai" class="footer__link">contact@edgeverse.ai</a></div></div>
+        <div><p class="footer__col-title">Company</p><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="careers.html" class="footer__link">Careers</a><a href="contact.html" class="footer__link">Contact</a><a href="mailto:contact@edgeverse.ai" class="footer__link">contact@edgeverse.ai</a></div></div>
       </div>
       <div class="footer__bottom"><p>© 2025 EdgeVerse India Pvt. Ltd. All rights reserved.</p></div>
     </div>
@@ -143,3 +151,7 @@
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
+
+
+
+
