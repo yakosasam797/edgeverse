@@ -1,23 +1,48 @@
 /* ============================================
-   EDGEVERSE — MAIN JS v3.1
-   Theme toggle, testimonials, nav, reveals
+   EDGEVERSE — MAIN JS v3.2
+   Theme toggle (URL-synced), testimonials, nav, reveals
    ============================================ */
 
-// --- THEME TOGGLE ---
+// --- THEME TOGGLE (URL-synced) ---
 const themeToggles = document.querySelectorAll('.theme-toggle');
 const html = document.documentElement;
 
-function setTheme(theme) {
-  html.setAttribute('data-theme', theme);
-  localStorage.setItem('ev-theme', theme);
+// Helper: get current URL params
+function getUrlParams() {
+  return new URLSearchParams(window.location.search);
 }
 
-// Init theme
-const savedTheme = localStorage.getItem('ev-theme');
-if (savedTheme) {
-  setTheme(savedTheme);
-} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  setTheme('dark');
+// Helper: update a query param without reload
+function setUrlParam(key, value) {
+  const url = new URL(window.location.href);
+  url.searchParams.set(key, value);
+  window.history.replaceState({}, '', url.toString());
+}
+
+function setTheme(theme, updateUrl = true) {
+  html.setAttribute('data-theme', theme);
+  localStorage.setItem('ev-theme', theme);
+  if (updateUrl) {
+    setUrlParam('theme', theme);
+  }
+}
+
+// Init theme — URL param takes priority > localStorage > system preference
+const urlParams = getUrlParams();
+const urlTheme = urlParams.get('theme');
+
+if (urlTheme === 'dark' || urlTheme === 'light') {
+  setTheme(urlTheme);
+} else {
+  const savedTheme = localStorage.getItem('ev-theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  } else {
+    // Ensure URL always reflects current theme
+    setUrlParam('theme', html.getAttribute('data-theme') || 'light');
+  }
 }
 
 themeToggles.forEach(btn => {
@@ -25,6 +50,33 @@ themeToggles.forEach(btn => {
     const curr = html.getAttribute('data-theme');
     setTheme(curr === 'dark' ? 'light' : 'dark');
   });
+});
+
+// --- CARRY THEME ACROSS NAV LINKS ---
+// Append ?theme= to all internal links so the URL always reflects theme
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+
+  const href = link.getAttribute('href');
+  // Skip external links, anchors-only, mailto, tel, javascript
+  if (!href || href.startsWith('http') || href.startsWith('mailto:') ||
+      href.startsWith('tel:') || href.startsWith('javascript:') ||
+      href === '#') return;
+
+  // For internal links (relative .html links or paths)
+  try {
+    const currentTheme = html.getAttribute('data-theme') || 'light';
+    const url = new URL(href, window.location.origin);
+
+    // Only modify links that navigate to a different page (not just #hash on same page)
+    if (url.pathname === window.location.pathname && href.startsWith('#')) return;
+
+    url.searchParams.set('theme', currentTheme);
+    link.setAttribute('href', url.pathname + url.search + url.hash);
+  } catch {
+    // If URL parsing fails, just let the default behavior happen
+  }
 });
 
 // --- NAV SCROLL ---
