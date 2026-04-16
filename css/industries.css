@@ -1,20 +1,60 @@
 /* ============================================
-   INDUSTRIES PAGE v2.0
+   INDUSTRIES PAGE v3.0 — Premium Redesign
+   3 distinct layouts, stats strip, cinematic
    ============================================ */
 
+/* ===== STATS STRIP — Under Hero ===== */
+.ind-stats-strip {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ind-stats-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: var(--space-xl) 0;
+}
+
+.ind-stats-strip__item {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.ind-stats-strip__value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.ind-stats-strip__label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.ind-stats-strip__divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border-light);
+  flex-shrink: 0;
+}
+
+/* ===== 01: FULL-BLEED SPLIT (Mobility) ===== */
 .ind-vertical {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
   align-items: stretch;
-  min-height: 550px;
-  border-bottom: 1px solid var(--border-light);
+  min-height: 600px;
 }
-
-.ind-vertical:last-child { border-bottom: none; }
-
-.ind-vertical--reverse .ind-vertical__media { order: 2; }
-.ind-vertical--reverse .ind-vertical__content { order: 1; }
 
 .ind-vertical__media {
   overflow: hidden;
@@ -91,31 +131,205 @@
   flex-shrink: 0;
 }
 
-/* Dark variant */
-.ind-vertical--dark {
-  background: var(--navy);
-  color: var(--text-on-dark);
-  border-bottom-color: rgba(255, 255, 255, 0.06);
+/* ===== 02: CINEMATIC DARK OVERLAY (Surveillance) ===== */
+.ind-cinematic {
+  position: relative;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: var(--space-5xl) 0;
 }
 
-.ind-vertical--dark .ind-vertical__number { color: rgba(255, 255, 255, 0.06); }
-.ind-vertical--dark .ind-vertical__label { color: var(--accent-teal); }
-.ind-vertical--dark .ind-vertical__title { color: #fff; }
-.ind-vertical--dark .ind-vertical__desc { color: rgba(255, 255, 255, 0.6); }
-.ind-vertical--dark .ind-feature { color: rgba(255, 255, 255, 0.55); }
-.ind-vertical--dark .ind-feature__dot { background: var(--accent-teal); }
+.ind-cinematic__bg {
+  position: absolute;
+  inset: 0;
+}
 
+.ind-cinematic__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ind-cinematic__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.92) 0%,
+    rgba(15, 23, 42, 0.75) 50%,
+    rgba(15, 23, 42, 0.55) 100%
+  );
+}
+
+.ind-cinematic__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.ind-cinematic__number {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.06);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.ind-cinematic__title {
+  color: #fff;
+  margin-bottom: var(--space-lg);
+}
+
+.ind-cinematic__desc {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
+  margin-bottom: var(--space-2xl);
+}
+
+.ind-cinematic__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.ind-cinematic__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.ind-cinematic__feature svg {
+  flex-shrink: 0;
+  stroke: var(--accent-teal);
+}
+
+/* ===== 03: FEATURE ROW (Automation) ===== */
+.ind-automation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.ind-automation__media {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.ind-automation__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.ind-automation__media:hover img {
+  transform: scale(1.03);
+}
+
+.ind-automation__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.ind-automation__item {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.ind-automation__item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(13, 148, 136, 0.06);
+}
+
+.ind-automation__check {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ind-automation__item strong {
+  display: block;
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.ind-automation__item span {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+  .ind-stats-strip__inner {
+    flex-wrap: wrap;
+  }
+
+  .ind-stats-strip__item {
+    flex: 0 0 50%;
+  }
+
+  .ind-stats-strip__divider {
+    display: none;
+  }
+
   .ind-vertical {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-  .ind-vertical--reverse .ind-vertical__media { order: 1; }
-  .ind-vertical--reverse .ind-vertical__content { order: 2; }
-
   .ind-vertical__media { height: 300px; }
   .ind-vertical__content { padding: var(--space-2xl) var(--page-padding); }
-
   .ind-features { grid-template-columns: 1fr; }
+
+  .ind-cinematic {
+    min-height: 500px;
+    padding: var(--space-3xl) 0;
+  }
+
+  .ind-cinematic__features {
+    grid-template-columns: 1fr;
+  }
+
+  .ind-automation {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 600px) {
+  .ind-stats-strip__item {
+    flex: 0 0 100%;
+    padding: var(--space-sm) 0;
+  }
+
+  .ind-cinematic__desc {
+    font-size: 16px;
+  }
 }

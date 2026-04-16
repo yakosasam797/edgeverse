@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
   <meta name="description" content="EdgeVerse is India's first ARAS-focused startup — building proprietary perception technology to save lives through edge AI. Meet our leadership.">
   <link rel="stylesheet" href="/css/design-system.css">
   <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/technology.css">
   <link rel="stylesheet" href="/css/about.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230D9488'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700' font-size='18'>E</text></svg>">
@@ -20,7 +21,7 @@
       <div class="nav__links">
         <a href="index.html" class="nav__link">Home</a>
         <div class="nav__item"><a href="technology.html" class="nav__link">Technology <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="technology.html#imedge">Imedge® Hardware<span class="dropdown-sub">AI Vision Processing Platform</span></a><a href="technology.html#perceiva">Perceiva™ Software<span class="dropdown-sub">Edge AI Perception Stack</span></a></div></div>
-        <div class="nav__item"><a href="industries.html" class="nav__link">Industries <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="industries.html">Safe & Secure Mobility<span class="dropdown-sub">Two-wheeler ARAS</span></a><a href="industries.html#surveillance">Smart Surveillance<span class="dropdown-sub">Edge-native security</span></a><a href="industries.html#automation">Industrial Automation<span class="dropdown-sub">Quality control & inspection</span></a></div></div>
+        <div class="nav__item"><a href="industries.html" class="nav__link">Industries <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="industries.html">Safe &amp; Secure Mobility<span class="dropdown-sub">Two-wheeler ARAS</span></a><a href="industries.html#surveillance">Smart Surveillance<span class="dropdown-sub">Edge-native security</span></a><a href="industries.html#automation">Industrial Automation<span class="dropdown-sub">Quality control &amp; inspection</span></a></div></div>
         <a href="safety.html" class="nav__link">Safety</a>
         <a href="about.html" class="nav__link active">About</a>
         <a href="careers.html" class="nav__link">Careers</a>
@@ -40,8 +41,11 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section class="page-hero--dark">
+    <div class="page-hero__bg">
+      <img src="/assets/images/hero-background.png" alt="" aria-hidden="true">
+    </div>
     <div class="page-hero__content">
       <span class="label">Company</span>
       <h1 class="page-hero__title h1">Building the future of perception.</h1>
@@ -51,28 +55,73 @@
     </div>
   </section>
 
-  <!-- MISSION & VISION -->
+  <!-- ===== MISSION & VISION — Editorial Statement ===== -->
   <section class="section section--spacious">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="section-header__label label">Our Purpose</span>
-        <h2 class="section-header__title">Driven by impact.</h2>
-      </div>
-      <div class="mission-grid reveal">
-        <div class="mission-card">
-          <p class="mission-card__title">Mission</p>
-          <p class="mission-card__text">To develop and deploy edge AI perception products that save lives. We engineer the full stack — hardware, software, and algorithms — to make advanced rider assistance accessible, affordable, and effective.</p>
+      <div class="about-statement reveal">
+        <div class="about-statement__accent">
+          <div class="gradient-line-vertical"></div>
         </div>
-        <div class="mission-card">
-          <p class="mission-card__title">Vision</p>
-          <p class="mission-card__text">A world where every rider is protected by intelligent perception technology. We envision ARAS becoming as fundamental to two-wheeler safety as ABS is to cars — a standard, not a luxury.</p>
+        <div class="about-statement__body">
+          <span class="label" style="display:block; margin-bottom: var(--space-lg);">Our Purpose</span>
+          <h2 class="about-statement__title">We exist to save lives through <span class="gradient-text">intelligent perception.</span></h2>
+          <div class="about-statement__grid">
+            <div class="about-statement__block">
+              <p class="about-statement__label">Mission</p>
+              <p class="about-statement__text">To develop and deploy edge AI perception products that save lives. We engineer the full stack — hardware, software, and algorithms — to make advanced rider assistance accessible, affordable, and effective.</p>
+            </div>
+            <div class="about-statement__block">
+              <p class="about-statement__label">Vision</p>
+              <p class="about-statement__text">A world where every rider is protected by intelligent perception technology. We envision ARAS becoming as fundamental to two-wheeler safety as ABS is to cars — a standard, not a luxury.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LEADERSHIP -->
-  <section class="section section--off-white section--spacious" id="team">
+  <!-- ===== OUR STORY — Timeline ===== -->
+  <section class="section section--off-white section--spacious" id="story">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label label">Our Journey</span>
+        <h2 class="section-header__title">From idea to product.</h2>
+      </div>
+      <div class="journey reveal-scale">
+        <div class="journey__item">
+          <span class="journey__year">2023</span>
+          <div class="journey__content">
+            <h3 class="journey__title">Founded</h3>
+            <p class="journey__desc">EdgeVerse founded in Bengaluru with a mission to bring ARAS technology to India's 220M+ two-wheeler riders.</p>
+          </div>
+        </div>
+        <div class="journey__item">
+          <span class="journey__year">2024</span>
+          <div class="journey__content">
+            <h3 class="journey__title">Platform Development</h3>
+            <p class="journey__desc">Imedge® hardware prototype completed. Perceiva™ software stack in development. First India Perception Model trained.</p>
+          </div>
+        </div>
+        <div class="journey__item">
+          <span class="journey__year">2025</span>
+          <div class="journey__content">
+            <h3 class="journey__title">Road Testing</h3>
+            <p class="journey__desc">First on-road testing and validation across Bengaluru's complex road conditions. OEM conversations initiated.</p>
+          </div>
+        </div>
+        <div class="journey__item journey__item--future">
+          <span class="journey__year">2026</span>
+          <div class="journey__content">
+            <h3 class="journey__title">Market Entry</h3>
+            <p class="journey__desc">Production deployment with OEM partners. Expansion into surveillance and industrial automation verticals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section class="section section--spacious" id="team">
     <div class="container">
       <div class="section-header section-header--center reveal">
         <span class="section-header__label label">Leadership</span>
@@ -80,73 +129,80 @@
         <p class="section-header__desc">Deep domain expertise in embedded systems, AI, automotive technology, and product commercialization.</p>
       </div>
       <div class="team-grid reveal">
-        <div class="team-card">
-          <div class="team-card__avatar">YP</div>
-          <div class="team-card__body">
-            <p class="team-card__name">Yakshith Putrevu</p>
-            <p class="team-card__role">CEO & Co-Founder</p>
+        <div class="team-card-v2">
+          <div class="team-card-v2__avatar">YP</div>
+          <div class="team-card-v2__info">
+            <h3 class="team-card-v2__name">Yakshith Putrevu</h3>
+            <p class="team-card-v2__role">CEO & Co-Founder</p>
+            <p class="team-card-v2__bio">Product strategy, business development, and fundraising. Driving EdgeVerse from concept to market.</p>
           </div>
         </div>
-        <div class="team-card">
-          <div class="team-card__avatar">SS</div>
-          <div class="team-card__body">
-            <p class="team-card__name">Sourabh Suman</p>
-            <p class="team-card__role">CTO & Co-Founder</p>
+        <div class="team-card-v2">
+          <div class="team-card-v2__avatar">SS</div>
+          <div class="team-card-v2__info">
+            <h3 class="team-card-v2__name">Sourabh Suman</h3>
+            <p class="team-card-v2__role">CTO & Co-Founder</p>
+            <p class="team-card-v2__bio">Leading hardware and embedded systems engineering. Full-stack perception platform architecture.</p>
           </div>
         </div>
-        <div class="team-card">
-          <div class="team-card__avatar">HV</div>
-          <div class="team-card__body">
-            <p class="team-card__name">Harsha Vardhan</p>
-            <p class="team-card__role">Head of Engineering</p>
+        <div class="team-card-v2">
+          <div class="team-card-v2__avatar">HV</div>
+          <div class="team-card-v2__info">
+            <h3 class="team-card-v2__name">Harsha Vardhan</h3>
+            <p class="team-card-v2__role">Head of Engineering</p>
+            <p class="team-card-v2__bio">AI/ML systems, computer vision pipeline, and edge deployment optimization.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ADVISORS -->
-  <section class="section section--tight">
+  <!-- ===== ADVISORS ===== -->
+  <section class="section section--off-white" id="advisors">
     <div class="container">
       <div class="section-header section-header--center reveal">
         <span class="section-header__label label">Advisors</span>
         <h2 class="section-header__title">Guided by experience.</h2>
       </div>
-      <div class="advisors-grid reveal">
-        <div class="advisor-card">
-          <div class="advisor-card__avatar">RK</div>
-          <div>
-            <p class="advisor-card__name">Dr. Rajiv Kishore</p>
-            <p class="advisor-card__role">Fmr. CTO, Valeo Vision Systems · Ex-Bosch</p>
+      <div class="advisors-v2 reveal">
+        <div class="advisor-v2">
+          <div class="advisor-v2__avatar">RK</div>
+          <div class="advisor-v2__info">
+            <h3 class="advisor-v2__name">Dr. Rajiv Kishore</h3>
+            <p class="advisor-v2__role">Fmr. CTO, Valeo Vision Systems · Ex-Bosch</p>
           </div>
+          <span class="advisor-v2__badge">Automotive</span>
         </div>
-        <div class="advisor-card">
-          <div class="advisor-card__avatar">SR</div>
-          <div>
-            <p class="advisor-card__name">Srinivasan R</p>
-            <p class="advisor-card__role">Principal Architect, Ambarella · 25+ yrs embedded</p>
+        <div class="advisor-v2">
+          <div class="advisor-v2__avatar">SR</div>
+          <div class="advisor-v2__info">
+            <h3 class="advisor-v2__name">Srinivasan R</h3>
+            <p class="advisor-v2__role">Principal Architect, Ambarella · 25+ yrs embedded</p>
           </div>
+          <span class="advisor-v2__badge">Embedded Systems</span>
         </div>
-        <div class="advisor-card">
-          <div class="advisor-card__avatar">AJ</div>
-          <div>
-            <p class="advisor-card__name">Amit Jain</p>
-            <p class="advisor-card__role">Investor · Ex-VP, Qualcomm Ventures</p>
+        <div class="advisor-v2">
+          <div class="advisor-v2__avatar">AJ</div>
+          <div class="advisor-v2__info">
+            <h3 class="advisor-v2__name">Amit Jain</h3>
+            <p class="advisor-v2__role">Investor · Ex-VP, Qualcomm Ventures</p>
           </div>
+          <span class="advisor-v2__badge">Venture Capital</span>
         </div>
-        <div class="advisor-card">
-          <div class="advisor-card__avatar">PD</div>
-          <div>
-            <p class="advisor-card__name">Priya Dhawan</p>
-            <p class="advisor-card__role">Regulatory Expert · Automotive Standards &amp; BIS</p>
+        <div class="advisor-v2">
+          <div class="advisor-v2__avatar">PD</div>
+          <div class="advisor-v2__info">
+            <h3 class="advisor-v2__name">Priya Dhawan</h3>
+            <p class="advisor-v2__role">Regulatory Expert · Automotive Standards &amp; BIS</p>
           </div>
+          <span class="advisor-v2__badge">Regulatory</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LOCATION -->
-  <section class="section section--off-white section--spacious">
+  <!-- ===== LOCATION ===== -->
+  <section class="section section--spacious">
     <div class="container">
       <div class="section-header section-header--center reveal">
         <span class="section-header__label label">Headquarters</span>
@@ -181,36 +237,47 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <div class="container" style="max-width:800px;">
-      <h2 class="h2 mb-lg reveal" style="color:#fff;">Let's build the future together.</h2>
-      <p class="body-lg mb-2xl reveal reveal-delay-1" style="color:rgba(255,255,255,0.6);max-width:520px;margin:0 auto var(--space-2xl);">
-        Join us in our mission to bring advanced perception technology to every road in India.
-      </p>
-      <div class="reveal reveal-delay-2"><a href="contact.html" class="btn btn--white btn--lg">Get in Touch <span class="btn-arrow">→</span></a></div>
+  <!-- ===== CTA ===== -->
+  <section class="simple-cta">
+    <div class="container">
+      <div class="simple-cta__inner reveal">
+        <div class="simple-cta__text">
+          <h3 class="simple-cta__headline">Let's build the future <span class="gradient-text">together.</span></h3>
+          <p class="simple-cta__desc">Join us in our mission to bring advanced perception technology to every road in India.</p>
+        </div>
+        <a href="contact.html" class="btn btn--primary btn--lg simple-cta__btn">Get in Touch <span class="simple-cta__btn-divider">|</span> <span class="btn-arrow">→</span></a>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-ref">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <div class="footer__logo"><img src="/assets/images/edgeverse-logo.png" alt="EdgeVerse" class="footer__logo-img"></div>
-          <p class="footer__desc">India's first ARAS platform — edge-native AI perception for safer mobility.</p>
+      <div class="footer-ref__top">
+        <div class="footer-ref__columns">
+          <div class="footer-ref__col"><p class="footer-ref__col-title">Platform</p><div class="footer-ref__links"><a href="technology.html">Technology</a><a href="technology.html#imedge">Imedge® Hardware</a><a href="technology.html#perceiva">Perceiva™ Software</a><a href="safety.html">Safety Features</a></div></div>
+          <div class="footer-ref__col"><p class="footer-ref__col-title">Industries</p><div class="footer-ref__links"><a href="industries.html">Safe Mobility</a><a href="industries.html#surveillance">Smart Surveillance</a><a href="industries.html#automation">Industrial Automation</a></div></div>
+          <div class="footer-ref__col"><p class="footer-ref__col-title">Company</p><div class="footer-ref__links"><a href="about.html">About Us</a><a href="about.html#team">Leadership</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div></div>
+          <div class="footer-ref__col"><p class="footer-ref__col-title">Resources</p><div class="footer-ref__links"><a href="#">Documentation</a><a href="#">Case Studies</a><a href="#">Blog</a></div></div>
         </div>
-        <div><p class="footer__col-title">Platform</p><div class="footer__links"><a href="technology.html" class="footer__link">Technology</a><a href="technology.html#imedge" class="footer__link">Imedge® Hardware</a><a href="technology.html#perceiva" class="footer__link">Perceiva™ Software</a></div></div>
-        <div><p class="footer__col-title">Industries</p><div class="footer__links"><a href="industries.html" class="footer__link">Safe Mobility</a><a href="industries.html#surveillance" class="footer__link">Surveillance</a><a href="industries.html#automation" class="footer__link">Automation & QC</a></div></div>
-        <div><p class="footer__col-title">Company</p><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="careers.html" class="footer__link">Careers</a><a href="contact.html" class="footer__link">Contact</a><a href="mailto:contact@edgeverse.ai" class="footer__link">contact@edgeverse.ai</a></div></div>
+        <div class="footer-ref__actions">
+          <a href="contact.html" class="btn btn--primary">Get Started</a>
+          <div class="footer-ref__social">
+            <a href="#" aria-label="X (Twitter)" class="footer-ref__social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="footer-ref__social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          </div>
+          <div class="footer-ref__address"><span>G01, #520, 8th Cross BEML Layout,</span><span>Thubarahalli, Bengaluru, Karnataka 560066</span></div>
+        </div>
       </div>
-      <div class="footer__bottom"><p>© 2025 EdgeVerse India Pvt. Ltd. All rights reserved.</p></div>
+      <div class="footer-ref__watermark"><span>EdgeVerse</span></div>
+      <div class="footer-ref__divider"></div>
+      <div class="footer-ref__bottom">
+        <p>© 2025 — All rights reserved. EdgeVerse India Private Limited.</p>
+        <div class="footer-ref__legal"><a href="#">Press and Media</a><a href="#">Privacy Policy</a></div>
+      </div>
     </div>
   </footer>
 
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
-
-
-
-
