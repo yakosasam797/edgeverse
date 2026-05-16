@@ -10,6 +10,7 @@ export default defineConfig({
         industries: resolve(__dirname, 'industries.html'),
         safety: resolve(__dirname, 'safety.html'),
         about: resolve(__dirname, 'about.html'),
+        investors: resolve(__dirname, 'investors.html'),
         careers: resolve(__dirname, 'careers.html'),
         contact: resolve(__dirname, 'contact.html'),
       },
