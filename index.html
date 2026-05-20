@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EdgeVerse — Full Stack ARAS: Predict. Alert. Protect.</title>
-  <meta name="description" content="EdgeVerse enables OEMs and Cluster makers with Perceiva™ — an edge-native vertically integrated AI mobility stack. Life-saving intelligence at 30 FPS.">
+  <title>EdgeVerse — Full Stack Edge AI Perception for Safer Roads</title>
+  <meta name="description" content="EdgeVerse is building a general-purpose perception intelligence that learns from data and scales across vehicles, geographies, and applications.">
   <link rel="stylesheet" href="/css/design-system.css">
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/home.css">
@@ -12,512 +12,287 @@
 </head>
 <body>
 
-  <!-- ===== ACCENT BAR ===== -->
+  <!-- NAV -->
   <div class="nav-accent-bar"></div>
-
-  <!-- ===== NAVIGATION ===== -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
-        <img src="/assets/images/edgeverse-logo.png" alt="EdgeVerse" class="nav__logo-img">
-      </a>
+      <a href="index.html" class="nav__logo"><img src="/assets/images/edgeverse-logo.png" alt="EdgeVerse" class="nav__logo-img"></a>
       <div class="nav__links">
-        <a href="index.html" class="nav__link active">Home</a>
-        <div class="nav__item">
-          <a href="technology.html" class="nav__link">
-            Technology
-            <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="nav__dropdown">
-            <a href="technology.html#imedge">Imedge® Hardware<span class="dropdown-sub">AI Vision Processing Platform</span></a>
-            <a href="technology.html#perceiva">Perceiva™ Software<span class="dropdown-sub">Edge AI Perception Stack</span></a>
-          </div>
-        </div>
-        <div class="nav__item">
-          <a href="industries.html" class="nav__link">
-            Industries
-            <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <div class="nav__dropdown">
-            <a href="industries.html">Safe & Secure Mobility<span class="dropdown-sub">Two-wheeler ARAS</span></a>
-            <a href="industries.html#surveillance">Smart Surveillance<span class="dropdown-sub">Edge-native security</span></a>
-            <a href="industries.html#automation">Industrial Automation<span class="dropdown-sub">Quality control & inspection</span></a>
-          </div>
-        </div>
+        <a href="product.html" class="nav__link">Product</a>
+        <div class="nav__item"><a href="technology.html" class="nav__link">Technology <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="technology.html#imedge">Imedge® Hardware<span class="dropdown-sub">AI Vision Processing Platform</span></a><a href="technology.html#perceiva">Perceiva™ Software<span class="dropdown-sub">Edge AI Perception Stack</span></a></div></div>
+        <div class="nav__item"><a href="industries.html" class="nav__link">Industries <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="industries.html">Safe &amp; Secure Mobility<span class="dropdown-sub">Two-wheeler ARAS</span></a><a href="industries.html#surveillance">Smart Surveillance<span class="dropdown-sub">Edge-native security</span></a><a href="industries.html#automation">Industrial Automation<span class="dropdown-sub">Quality control &amp; inspection</span></a></div></div>
         <a href="safety.html" class="nav__link">Safety</a>
         <div class="nav__item"><a href="about.html" class="nav__link">Company <svg class="nav__link-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nav__dropdown"><a href="about.html">About Us<span class="dropdown-sub">Our story &amp; mission</span></a><a href="about.html#team">Leadership<span class="dropdown-sub">Meet the team</span></a><a href="investors.html">Investors<span class="dropdown-sub">Backed by visionaries</span></a><a href="#">Data Privacy<span class="dropdown-sub">How we protect data</span></a></div></div>
         <a href="careers.html" class="nav__link">Careers</a>
       </div>
       <div class="nav__actions">
-        <a href="contact.html" class="btn--outline-nav nav__cta">Schedule a Call</a>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-        <button class="nav__toggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="contact.html" class="btn--outline-nav nav__cta">Contact</a>
+        <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile">
-      <a href="index.html">Home</a>
-      <a href="technology.html">Technology</a>
-      <a href="industries.html">Industries</a>
-      <a href="safety.html">Safety</a>
-      <a href="about.html">Company</a><a href="investors.html">Investors</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
+      <a href="product.html">Product</a><a href="technology.html">Technology</a><a href="industries.html">Industries</a>
+      <a href="safety.html">Safety</a><a href="about.html">Company</a><a href="investors.html">Investors</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero__top">
-      <h1 class="hero__title reveal">Empowering every commute with <span class="gradient-text">Life-Saving Intelligence</span></h1>
-      <div class="hero__right reveal reveal-delay-1">
-        <p class="hero__desc">
-          We enable OEMs and Cluster makers with Perceiva™ — an edge-native vertically integrated AI mobility stack. With patented sensor fusion and India Perception Model, we turn critical milliseconds into life-saving seconds.
-        </p>
-        <div class="hero__cta-row">
-          <a href="contact.html" class="btn btn--primary">Schedule a Call <span class="btn-arrow">→</span></a>
-          <a href="#road-test" class="hero__cta-text">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16" fill="var(--accent)" stroke="none"/></svg>
-            See it in action
-          </a>
-        </div>
-      </div>
+  <!-- 1. HERO — dark, full-bleed, bottom-left text -->
+  <section class="w-hero" id="hero">
+    <div class="w-hero__media">
+      <img src="/assets/wayve/hero-cinematic.png" alt="AI perception overlay on Indian city roads at dusk">
     </div>
-    <div class="hero__media reveal-scale">
-      <img src="/assets/images/hero-aras-action.png" alt="EdgeVerse ARAS — AI collision detection on Indian roads">
-      <a href="#road-test" class="hero__play">
-        <div class="hero__play-icon">
-          <svg viewBox="0 0 24 24"><polygon points="10,8 16,12 10,16"/></svg>
+    <div class="w-hero__overlay"></div>
+    <div class="w-hero__content">
+      <h1 class="w-hero__title">Perception for any vehicle, anywhere</h1>
+      <a href="product.html" class="w-hero__cta">Discover more</a>
+    </div>
+  </section>
+
+  <!-- 2. STATEMENT — white, scroll word reveal -->
+  <section class="w-statement" id="statement">
+    <div class="container">
+      <p class="w-statement__text" id="scroll-statement">EdgeVerse is building a general-purpose perception intelligence that learns from data and scales across vehicles, geographies, and applications.</p>
+    </div>
+  </section>
+
+  <!-- 3. BENTO — 3 rounded portrait cards with text at top -->
+  <article class="w-bento" id="bento">
+    <div class="w-bento__grid">
+      <a href="product.html" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-product-v2.png" alt="Perceiva ARAS Platform"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Build with EdgeVerse</h3>
+          <p>Learn about the Perceiva™ ARAS Platform, our edge-native, vehicle-agnostic software to unlock all levels of rider assistance.</p>
+          <span class="w-bento__btn">Perceiva™ ARAS <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </div>
-        <span class="hero__play-text">Watch Perceiva™ in action</span>
+      </a>
+      <a href="investors.html" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-tech-v2.png" alt="Investors"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Investors</h3>
+          <p>Explore the companies who are helping shape the future of mobility in India.</p>
+          <span class="w-bento__btn">Investors <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="safety.html" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-safety-v2.png" alt="Indian Road Safety"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Indian Road Safety</h3>
+          <p>See how EdgeVerse is deploying AI perception across India's most challenging roads.</p>
+          <span class="w-bento__btn">Safety Framework <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
       </a>
     </div>
-  </section>
+  </article>
 
-  <!-- Stats Bar -->
-  <div class="hero__stats">
-    <div class="hero__stats-inner">
-      <div class="hero__stat">
-        <span class="hero__stat-value">Upto 70% Accident Avoidance</span>
+
+
+  <!-- 5. BRANDS — Wayve-exact: large monochrome logo grid -->
+  <section class="w-brands" id="brands">
+    <div class="w-brands__inner">
+      <div class="w-brands__head reveal">
+        <h2>Trusted by the companies shaping the future</h2>
+        <p>Collaborating with world-class automakers, technology pioneers, and mobility partners to deliver reliable, real-world perception that meets the highest standards for safety, scale, and innovation.</p>
       </div>
-      <div class="hero__stat">
-        <span class="hero__stat-value">30 FPS AI Inference</span>
+      <div class="w-brands__grid reveal">
+        <!-- Row 1 -->
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="36" fill="#0a0a0a" letter-spacing="-1">AMD</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="40" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="400" font-size="42" fill="#0a0a0a" letter-spacing="0">arm</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="42" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="28" fill="#0a0a0a" letter-spacing="1">Ambarella</text>
+          </svg>
+        </div>
+        <!-- Row 2 -->
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="30" fill="#0a0a0a" letter-spacing="0">Qualcomm</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34" fill="#0a0a0a" letter-spacing="0">NVIDIA</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="32" fill="#0a0a0a" letter-spacing="1">Valeo</text>
+          </svg>
+        </div>
+        <!-- Row 3 -->
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="38" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="32" fill="#0a0a0a" letter-spacing="1">Bosch</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="36" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="24" fill="#0a0a0a" letter-spacing="4">ARAI</text>
+          </svg>
+        </div>
+        <div class="w-brands__logo-item">
+          <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="36" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="24" fill="#0a0a0a" letter-spacing="4">BIS</text>
+          </svg>
+        </div>
       </div>
-      <div class="hero__stat">
-        <span class="hero__stat-value">Predictive Collision Alerts</span>
-      </div>
-      <div class="hero__stat">
-        <span class="hero__stat-value">Front/Rear Camera + RADAR</span>
+      <div class="w-brands__action reveal">
+        <a href="investors.html" class="w-brands__btn">Investors</a>
       </div>
     </div>
-  </div>
-
-  <!-- ===== WHO WE ARE ===== -->
-  <section class="section section--spacious">
-    <div class="container">
-      <div class="intro-block reveal">
-        <div class="intro-block__text">
-          <div class="gradient-line"></div>
-          <span class="label mb-md" style="display:block;">Who We Are</span>
-          <h2 class="h2 mb-lg">Full Stack ARAS — <span class="gradient-text">Predict. Alert. Protect.</span></h2>
-        </div>
-        <div>
-          <p class="body-xl text-secondary mb-xl">
-            EdgeVerse is a vertically integrated edge AI company enabling OEMs and Tier-1s with <strong style="color:var(--text-primary)">Perceiva™</strong> — a full-stack Advanced Rider Assistance System. Our patented sensor fusion and <strong style="color:var(--text-primary)">India Perception Model</strong> powers real-time collision alerts, blind-spot detection, and intelligent ride recording.
-          </p>
-          <a href="technology.html" class="btn btn--outline">Explore our technology <span class="btn-arrow">→</span></a>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- ===== PLATFORM SECTION (moved right after Who We Are) ===== -->
-  <section class="section section--off-white section--spacious" id="platform">
-    <div class="container">
-      <div class="section-header section-header--center reveal">
-        <span class="section-header__label label">Our Platform</span>
-        <h2 class="section-header__title">Full-stack <span class="gradient-text">ARAS technology.</span></h2>
-        <p class="section-header__desc">
-          A vertically integrated hardware-software ecosystem engineered for the edge — delivering real-time perception without cloud dependency.
-        </p>
-      </div>
-      <div class="platform-grid">
-        <div class="platform-card reveal">
-          <div class="platform-card__media">
-            <img src="/assets/images/image 8.png" alt="Imedge Hardware" loading="lazy">
+
+
+  <!-- 7. NEWS — Wayve-exact: asymmetric 2+3 grid with bg images -->
+  <section class="w-news" id="news">
+    <div class="w-news__inner">
+      <h2 class="w-news__title reveal">In the news</h2>
+      <div class="w-news__grid">
+
+        <!-- TOP ROW: 2 large cards -->
+        <a href="#" class="w-news__card w-news__card--lg reveal">
+          <div class="w-news__card-bg">
+            <img src="/assets/wayve/card-product-v2.png" alt="EdgeVerse vehicle with AI perception">
           </div>
-          <div class="platform-card__body">
-            <span class="label platform-card__label">Hardware Platform</span>
-            <h3 class="h4 platform-card__title">Imedge®</h3>
-            <p class="platform-card__desc">
-              Real-time, secure AI vision hardware powered by Ambarella CV25 SoC with dedicated CVflow® architecture.
-            </p>
-            <div class="platform-card__features">
-              <span class="platform-card__tag">Ambarella CV25 SoC</span>
-              <span class="platform-card__tag">150° FoV HDR Camera</span>
-              <span class="platform-card__tag">WiFi / BT5.2</span>
-              <span class="platform-card__tag">6-Axis IMU</span>
+          <div class="w-news__card-overlay"></div>
+          <span class="w-news__card-logo-text">TechCrunch</span>
+          <div class="w-news__card-content">
+            <h3>EdgeVerse raises pre-seed to build India's first two-wheeler ARAS platform</h3>
+            <span class="w-news__card-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+        <a href="#" class="w-news__card w-news__card--lg reveal">
+          <div class="w-news__card-bg">
+            <img src="/assets/wayve/card-safety-v2.png" alt="AI safety on Indian roads">
+          </div>
+          <div class="w-news__card-overlay"></div>
+          <span class="w-news__card-logo-text">YourStory</span>
+          <div class="w-news__card-content">
+            <h3>How EdgeVerse is using edge AI to make India's deadliest roads safer</h3>
+            <span class="w-news__card-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+        <!-- BOTTOM ROW: 3 smaller cards -->
+        <a href="#" class="w-news__card w-news__card--sm w-news__card--colored reveal">
+          <div class="w-news__card-overlay"></div>
+          <span class="w-news__card-logo-text">Inc42</span>
+          <div class="w-news__card-content">
+            <h3>The Bengaluru startup building what Mobileye couldn't for two-wheelers</h3>
+            <span class="w-news__card-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+        <a href="#" class="w-news__card w-news__card--sm reveal">
+          <div class="w-news__card-bg">
+            <img src="/assets/wayve/feature-data.png" alt="EdgeVerse AI technology">
+          </div>
+          <div class="w-news__card-overlay"></div>
+          <span class="w-news__card-logo-text">Economic Times</span>
+          <div class="w-news__card-content">
+            <h3>Edge AI meets Indian roads: How EdgeVerse is rewriting ADAS</h3>
+            <span class="w-news__card-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+        <a href="#" class="w-news__card w-news__card--sm reveal">
+          <div class="w-news__card-bg">
+            <img src="/assets/wayve/feature-universal.png" alt="EdgeVerse perception technology">
+          </div>
+          <div class="w-news__card-overlay"></div>
+          <span class="w-news__card-logo-text">Forbes India</span>
+          <div class="w-news__card-content">
+            <h3>Why India's road safety revolution starts with perception, not autonomy</h3>
+            <span class="w-news__card-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="cta">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__text">
+        <h2>Let's make roads <span class="cta-banner__accent">safer together.</span></h2>
+        <p>Integrate ARAS into your vehicles. Partner with us to bring life-saving AI safety technology to millions of riders.</p>
+      </div>
+      <a href="contact.html" class="cta-banner__btn">Schedule a Call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <!-- Link columns + right side -->
+      <div class="footer__top">
+        <div class="footer__columns">
+          <div class="footer__col">
+            <h5 class="footer__col-title">Platform</h5>
+            <div class="footer__links">
+              <a href="technology.html" class="footer__link">Technology</a>
+              <a href="technology.html#imedge" class="footer__link">Imedge® Hardware</a>
+              <a href="technology.html#perceiva" class="footer__link">Perceiva™ Software</a>
+              <a href="safety.html" class="footer__link">Safety Features</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__col-title">Industries</h5>
+            <div class="footer__links">
+              <a href="industries.html" class="footer__link">Safe Mobility</a>
+              <a href="industries.html#surveillance" class="footer__link">Smart Surveillance</a>
+              <a href="industries.html#automation" class="footer__link">Industrial Automation</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__col-title">Company</h5>
+            <div class="footer__links">
+              <a href="about.html" class="footer__link">About Us</a>
+              <a href="about.html#team" class="footer__link">Leadership</a>
+              <a href="careers.html" class="footer__link">Careers</a>
+              <a href="contact.html" class="footer__link">Contact</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h5 class="footer__col-title">Resources</h5>
+            <div class="footer__links">
+              <a href="#" class="footer__link">Documentation</a>
+              <a href="#" class="footer__link">Case Studies</a>
+              <a href="#" class="footer__link">Blog</a>
             </div>
           </div>
         </div>
-        <div class="platform-card reveal reveal-delay-1">
-          <div class="platform-card__media">
-            <img src="/assets/images/image 10.png" alt="Perceiva AI Stack" loading="lazy">
+        <div class="footer__right">
+          <a href="contact.html" class="footer__cta-btn">Get Started</a>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="footer__social" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
           </div>
-          <div class="platform-card__body">
-            <span class="label platform-card__label">Perception Platform</span>
-            <h3 class="h4 platform-card__title">Perceiva™</h3>
-            <p class="platform-card__desc">
-              Edge-native AI mobility stack with patented sensor fusion, India Perception Model, and real-time object tracking.
-            </p>
-            <div class="platform-card__features">
-              <span class="platform-card__tag">Sensor Fusion</span>
-              <span class="platform-card__tag">India Perception Model</span>
-              <span class="platform-card__tag">Object Detection</span>
-              <span class="platform-card__tag">Privacy-First</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== COLLISION ALERT — Redesigned as full-bleed split layout ===== -->
-  <section class="collision-hero" id="collision-alert">
-    <div class="collision-hero__grid">
-      <div class="collision-hero__content">
-        <div class="collision-hero__inner">
-          <span class="label mb-md" style="display:block; color:var(--accent);">Core Capability</span>
-          <h2 class="h2 mb-lg">Perceiva™ Predictive Collision Alert Zones</h2>
-          <p class="body-lg text-secondary mb-xl">
-            Multi-zone threat detection using front & rear camera combined with RADAR. Real-time alerts for Forward Collision, Blind Spot, and Lane Change scenarios.
-          </p>
-          <div class="collision-hero__features">
-            <div class="collision-hero__feature">
-              <div class="collision-hero__feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-              </div>
-              <div>
-                <strong>Forward Collision Warning</strong>
-                <span>Real-time distance tracking with predictive alerting</span>
-              </div>
-            </div>
-            <div class="collision-hero__feature">
-              <div class="collision-hero__feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <div>
-                <strong>Blind Spot Detection</strong>
-                <span>360° awareness for lane changes and merges</span>
-              </div>
-            </div>
-            <div class="collision-hero__feature">
-              <div class="collision-hero__feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              </div>
-              <div>
-                <strong>Video Recording</strong>
-                <span>Accident freeze capability with cloud backup</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collision-hero__image">
-        <img src="/assets/images/collision-zones-light.png" alt="Perceiva Collision Alert Zones" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WHY ARAS — Compact ===== -->
-  <section class="aras-compact" id="why-aras">
-    <div class="container">
-      <div class="aras-compact__grid reveal">
-        <div class="aras-compact__text">
-          <span class="label label--dark">Know about ARAS</span>
-          <h2 class="aras-compact__title">What is ARAS?</h2>
-          <p class="aras-compact__desc">
-            ARAS (Advanced Rider Assistance Systems) enhance motorcycle rider safety using cameras, IMUs, and intelligent algorithms to deliver <strong>real-time collision alerts</strong> — helping riders avoid accidents and reduce fatigue.
-          </p>
-        </div>
-        <div class="aras-compact__stats">
-          <div class="aras-compact__stat reveal reveal-delay-1">
-            <span class="aras-compact__stat-value" data-count="44" data-suffix="%">0%</span>
-            <span class="aras-compact__stat-label">of road fatalities are motorcyclists in India</span>
-          </div>
-          <div class="aras-compact__stat reveal reveal-delay-2">
-            <span class="aras-compact__stat-value">27×</span>
-            <span class="aras-compact__stat-label">more likely to result in fatality vs cars</span>
-          </div>
-          <div class="aras-compact__stat reveal reveal-delay-3">
-            <span class="aras-compact__stat-value" data-count="70" data-suffix="%">0%</span>
-            <span class="aras-compact__stat-label">accident avoidance via predictive alerts</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PERCEIVA ROAD TEST ===== -->
-  <section class="road-test" id="road-test">
-    <div class="road-test__header">
-      <span class="label mb-md reveal" style="display:block;">Perceiva™ Road Test</span>
-      <h2 class="road-test__title reveal">Real-world tested.<br>Real-time proven.</h2>
-      <a href="https://edgeverse.ai/" class="road-test__browse reveal" target="_blank" rel="noopener">Browse all demos <span>→</span></a>
-    </div>
-    <div class="road-test__grid">
-      <div class="road-test__card reveal reveal-delay-1">
-        <img src="/assets/images/demo-bsd.png" alt="Blind Spot Detection" class="road-test__card-img" loading="lazy">
-        <div class="road-test__play" aria-label="Play demo">
-          <svg viewBox="0 0 24 24"><polygon points="10,8 16,12 10,16"/></svg>
-        </div>
-        <div class="road-test__card-info">
-          <div class="road-test__card-label">Perceiva™</div>
-          <div class="road-test__card-title">Blind Spot Detection & Lane Change Assist</div>
-        </div>
-      </div>
-      <div class="road-test__card reveal reveal-delay-2">
-        <img src="/assets/images/demo-fcw.png" alt="Forward Collision Warning" class="road-test__card-img" loading="lazy">
-        <div class="road-test__play" aria-label="Play demo">
-          <svg viewBox="0 0 24 24"><polygon points="10,8 16,12 10,16"/></svg>
-        </div>
-        <div class="road-test__card-info">
-          <div class="road-test__card-label">Perceiva™</div>
-          <div class="road-test__card-title">Forward Collision Warning with real-time tracking</div>
-        </div>
-      </div>
-      <div class="road-test__card reveal reveal-delay-3">
-        <img src="/assets/images/demo-overtaking.png" alt="No False Overtaking" class="road-test__card-img" loading="lazy">
-        <div class="road-test__play" aria-label="Play demo">
-          <svg viewBox="0 0 24 24"><polygon points="10,8 16,12 10,16"/></svg>
-        </div>
-        <div class="road-test__card-info">
-          <div class="road-test__card-label">Perceiva™</div>
-          <div class="road-test__card-title">No False Overtaking Alerts</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ===== FEATURE ROW: Safety ===== -->
-  <section class="section--off-white" id="how-it-works">
-    <div class="container--full">
-      <div class="feature-row reveal">
-        <div class="feature-row__media">
-          <img src="/assets/images/image 4.png" alt="Road test: blind spot detection" loading="lazy">
-        </div>
-        <div class="feature-row__content">
-          <span class="label">Proven on Indian Roads</span>
-          <h3 class="h3">Tested in the world's most challenging driving environment.</h3>
-          <p>
-            Our Perceiva™ stack is trained and validated on Indian road conditions — dense traffic, mixed vehicles, unpredictable behaviour, and low-light scenarios.
-          </p>
-          <ul class="feature-list">
-            <li class="feature-list__item"><span class="feature-list__dot"></span>Blind Spot Detection (BSD) & Lane Change Assist</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>Forward Collision Warning (FCW)</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>No False Overtaking Alerts</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>Video Recording with Accident Freeze</li>
-          </ul>
-          <a href="safety.html" class="btn btn--primary">Explore Safety <span class="btn-arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURE ROW: Hardware ===== -->
-  <section id="imedge-specs">
-    <div class="container--full">
-      <div class="feature-row feature-row--reverse reveal">
-        <div class="feature-row__media">
-          <img src="/assets/images/image 9.png" alt="Imedge hardware" loading="lazy">
-        </div>
-        <div class="feature-row__content">
-          <span class="label">Hardware Specs</span>
-          <h3 class="h3">Built for the edge. Ready for integration.</h3>
-          <p>
-            Imedge® is designed for automotive and industrial edge environments. Customizable form factor with industry-standard interfaces.
-          </p>
-          <ul class="feature-list">
-            <li class="feature-list__item"><span class="feature-list__dot"></span>Ambarella® CV25 SoC · Arm® 64-bit quad core</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>Onsemi AR0147AT HDR Camera · 150° FoV</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>WiFi · BT5.2 · HDMI · GPS/GNSS · 6-Axis IMU</li>
-            <li class="feature-list__item"><span class="feature-list__dot"></span>DDR4/LPDDR4 up to 2GB · Micro-SD Support</li>
-          </ul>
-          <a href="technology.html" class="btn btn--outline">Full Tech Specs <span class="btn-arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== RIDER VOICES ===== -->
-  <section class="testimonials-brand" id="voices">
-    <div class="testimonials-brand__inner">
-      <div class="testimonials-brand__label">Two-Wheeler Safety Survey</div>
-      <div class="testimonials-brand__quote-mark">❝</div>
-      <p class="testimonials-brand__quote" id="testimonial-quote">
-        Alerts in Low-Light scenarios are extremely critical.
-      </p>
-      <p class="testimonials-brand__author" id="testimonial-author">Pranay C Nath — Avid Rider</p>
-      <a href="safety.html" class="testimonials-brand__cta">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16" fill="#fff" stroke="none"/></svg>
-        Learn how ARAS protects riders
-      </a>
-      <div class="testimonials-brand__avatars">
-        <div class="testimonials-brand__avatar">PC</div>
-        <div class="testimonials-brand__avatar">VC</div>
-        <div class="testimonials-brand__avatar">AP</div>
-        <div class="testimonials-brand__avatar">AK</div>
-      </div>
-      <div class="testimonials-brand__nav">
-        <button class="testimonials-brand__dot active" data-index="0" aria-label="Testimonial 1"></button>
-        <button class="testimonials-brand__dot" data-index="1" aria-label="Testimonial 2"></button>
-        <button class="testimonials-brand__dot" data-index="2" aria-label="Testimonial 3"></button>
-        <button class="testimonials-brand__dot" data-index="3" aria-label="Testimonial 4"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BLOG / NEWS — Edge-to-edge horizontal scroll ===== -->
-  <section class="blog-scroll-section" id="stories">
-    <div class="blog-scroll__header-wrap">
-      <div class="blog-scroll__header reveal">
-        <div>
-          <span class="label">Latest from EdgeVerse</span>
-          <h2 class="h3 mb-md">News & Insights</h2>
-        </div>
-        <a href="#" class="blog-scroll__view-all">View all <span>→</span></a>
-      </div>
-    </div>
-    <div class="blog-scroll__track">
-      <div class="blog-scroll__card reveal">
-        <div class="blog-scroll__card-media">
-          <img src="/assets/images/article-road-safety.png" alt="Two-Wheeler Safety" loading="lazy">
-        </div>
-        <div class="blog-scroll__card-body">
-          <span class="blog-scroll__card-cat">Safety</span>
-          <h3 class="blog-scroll__card-title">Two-Wheeler Safety: Why India Needs ARAS Now</h3>
-          <a href="#" class="blog-scroll__card-link">Read Blog →</a>
-        </div>
-      </div>
-      <div class="blog-scroll__card reveal reveal-delay-1">
-        <div class="blog-scroll__card-media">
-          <img src="/assets/images/article-ai-tech.png" alt="Perceiva AI" loading="lazy">
-        </div>
-        <div class="blog-scroll__card-body">
-          <span class="blog-scroll__card-cat">Technology</span>
-          <h3 class="blog-scroll__card-title">How Perceiva™ Detects Blind Spots in Under 1 Second</h3>
-          <a href="#" class="blog-scroll__card-link">Read Blog →</a>
-        </div>
-      </div>
-      <div class="blog-scroll__card reveal reveal-delay-2">
-        <div class="blog-scroll__card-media">
-          <img src="/assets/images/article-oem-partnership.png" alt="OEM Partnerships" loading="lazy">
-        </div>
-        <div class="blog-scroll__card-body">
-          <span class="blog-scroll__card-cat">News</span>
-          <h3 class="blog-scroll__card-title">EdgeVerse Partners with OEMs to Bring ARAS to Market</h3>
-          <a href="#" class="blog-scroll__card-link">Read Blog →</a>
-        </div>
-      </div>
-      <div class="blog-scroll__card reveal reveal-delay-3">
-        <div class="blog-scroll__card-media">
-          <img src="/assets/images/image 3.png" alt="ARAS Technology" loading="lazy">
-        </div>
-        <div class="blog-scroll__card-body">
-          <span class="blog-scroll__card-cat">Product</span>
-          <h3 class="blog-scroll__card-title">Mobile App for Ride Configurability & Video Playback</h3>
-          <a href="#" class="blog-scroll__card-link">Read Blog →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SIMPLE CTA BANNER ===== -->
-  <section class="simple-cta">
-    <div class="container">
-      <div class="simple-cta__inner reveal">
-        <div class="simple-cta__text">
-          <h3 class="simple-cta__headline">Life-saving intelligence for <span class="gradient-text">every two-wheeler</span> on the road.</h3>
-          <p class="simple-cta__desc">Whether you're an OEM, Tier-1 supplier, cluster maker, or fleet operator — EdgeVerse's full-stack ARAS integrates directly into your vehicles. Real-time collision alerts, blind-spot detection, and predictive safety — all at the edge.</p>
-        </div>
-        <a href="contact.html" class="btn btn--primary btn--lg simple-cta__btn">Schedule a Call <span class="simple-cta__btn-divider">|</span> <span class="btn-arrow">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER — Reference-style columns ===== -->
-  <footer class="footer-ref">
-    <div class="container">
-      <div class="footer-ref__top">
-        <div class="footer-ref__columns">
-          <div class="footer-ref__col">
-            <p class="footer-ref__col-title">Platform</p>
-            <div class="footer-ref__links">
-              <a href="technology.html">Technology</a>
-              <a href="technology.html#imedge">Imedge® Hardware</a>
-              <a href="technology.html#perceiva">Perceiva™ Software</a>
-              <a href="safety.html">Safety Features</a>
-            </div>
-          </div>
-          <div class="footer-ref__col">
-            <p class="footer-ref__col-title">Industries</p>
-            <div class="footer-ref__links">
-              <a href="industries.html">Safe Mobility</a>
-              <a href="industries.html#surveillance">Smart Surveillance</a>
-              <a href="industries.html#automation">Industrial Automation</a>
-            </div>
-          </div>
-          <div class="footer-ref__col">
-            <p class="footer-ref__col-title">Company</p>
-            <div class="footer-ref__links">
-              <a href="about.html">About Us</a>
-              <a href="about.html#team">Leadership</a>
-              <a href="investors.html">Investors</a>
-              <a href="careers.html">Careers</a>
-              <a href="contact.html">Contact</a>
-            </div>
-          </div>
-          <div class="footer-ref__col">
-            <p class="footer-ref__col-title">Resources</p>
-            <div class="footer-ref__links">
-              <a href="#">Documentation</a>
-              <a href="#">Case Studies</a>
-              <a href="#">Blog</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-ref__actions">
-          <a href="contact.html" class="btn btn--primary">Get Started</a>
-          <div class="footer-ref__social">
-            <a href="#" aria-label="X (Twitter)" class="footer-ref__social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="footer-ref__social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-          </div>
-          <div class="footer-ref__address">
-            <span>G01, #520, 8th Cross BEML Layout,</span>
-            <span>Thubarahalli, Bengaluru, Karnataka 560066</span>
-          </div>
+          <p class="footer__address">G01, #529, 9th Cross BEML Layout,<br>Trustwell, Bengaluru, Karnataka 560066</p>
         </div>
       </div>
 
-      <!-- Large watermark brand name -->
-      <div class="footer-ref__watermark">
-        <span>EdgeVerse</span>
-      </div>
+      <!-- Large watermark -->
+      <div class="footer__watermark">EdgeVerse</div>
 
-      <div class="footer-ref__divider"></div>
-      <div class="footer-ref__bottom">
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
         <p>© 2025 — All rights reserved. EdgeVerse India Private Limited.</p>
-        <div class="footer-ref__legal">
+        <div class="footer__legal">
           <a href="#">Press and Media</a>
           <a href="#">Privacy Policy</a>
         </div>
@@ -525,6 +300,10 @@
     </div>
   </footer>
 
-  <script type="module" src="/js/main.js"></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
