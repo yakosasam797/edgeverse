@@ -144,3 +144,18 @@ var cObs = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.5 });
 counters.forEach(function(el) { cObs.observe(el); });
+
+// Technology page — comparison toggle tabs
+var compareTabs = document.querySelectorAll('.tech-compare__tab');
+if (compareTabs.length) {
+  compareTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = this.dataset.tab;
+      compareTabs.forEach(function(t) { t.classList.remove('active'); });
+      this.classList.add('active');
+      document.querySelectorAll('.tech-compare__panel').forEach(function(p) {
+        p.classList.toggle('active', p.dataset.panel === target);
+      });
+    });
+  });
+}

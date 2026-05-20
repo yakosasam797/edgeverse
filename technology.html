@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== 1. HERO — full-bleed image, badge, title, subtitle ===== -->
   <section class="tech-hero">
     <div class="tech-hero__media">
       <img src="/assets/wayve/tech-hero.png" alt="AI vision processing visualization">
@@ -49,129 +49,210 @@
     </div>
   </section>
 
-  <!-- ===== ARCHITECTURE STACK ===== -->
-  <section class="tech-arch">
-    <div class="tech-arch__inner">
-      <div class="tech-arch__header reveal">
-        <h2 class="tech-arch__title">Full-stack edge AI architecture</h2>
-        <p class="tech-arch__sub">Four tightly integrated layers — from application intelligence to custom silicon — optimised to deliver real-time perception at under 2 watts.</p>
+  <!-- ===== 2. STATEMENT + SPLIT — heading + 3 key points left, image right ===== -->
+  <section class="tech-split">
+    <div class="tech-split__inner">
+      <div class="tech-split__header reveal">
+        <h2 class="tech-split__heading">Full-stack edge AI architecture for real-world perception</h2>
+        <p class="tech-split__intro">EdgeVerse specializes in building AI perception models for two-wheelers. Our technology equips vehicles with an intelligent 'perception brain' that can see, understand, and react to India's chaotic roads.</p>
       </div>
-      <div class="tech-arch__stack reveal">
-        <div class="tech-arch__layer tech-arch__layer--app">
-          <div class="tech-arch__layer-title">Application Layer</div>
-          <div class="tech-arch__layer-desc">ARAS · Surveillance · Industrial QC</div>
+      <div class="tech-split__body">
+        <div class="tech-split__points">
+          <div class="tech-split__point reveal">
+            <h3>Optimized for Indian roads</h3>
+            <p>Our AI models are trained exclusively on Indian road data — handling chaotic traffic, absence of lane markings, mixed vehicle types, and unpredictable pedestrian behaviour.</p>
+          </div>
+          <div class="tech-split__point reveal reveal-delay-1">
+            <h3>Solves the edge deployment problem</h3>
+            <p>EdgeVerse runs all perception on-device at under 2 watts, with zero cloud dependency. No latency, no connectivity issues, no data costs — just real-time safety.</p>
+          </div>
+          <div class="tech-split__point reveal reveal-delay-2">
+            <h3>Efficient and scalable learning</h3>
+            <p>Our self-supervised learning method enables efficient, large-scale model training, essential for seamlessly adapting AI capabilities to new vehicles and geographies.</p>
+          </div>
         </div>
-        <div class="tech-arch__layer tech-arch__layer--ai">
-          <div class="tech-arch__layer-title">AI Models — India Perception Model</div>
-          <div class="tech-arch__layer-desc">Object Detection · Depth Estimation · Road Segmentation · Tracking</div>
-        </div>
-        <div class="tech-arch__layer tech-arch__layer--sw">
-          <div class="tech-arch__layer-title">Perceiva™ Software Stack</div>
-          <div class="tech-arch__layer-desc">Sensor Fusion · Inference Engine · Safety Runtime · OTA Updates</div>
-        </div>
-        <div class="tech-arch__layer tech-arch__layer--hw">
-          <div class="tech-arch__layer-title">Imedge® Hardware</div>
-          <div class="tech-arch__layer-desc">Ambarella CV25 · 5MP Camera · IP67 · &lt;2W Power</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PILLARS ===== -->
-  <section class="tech-pillars">
-    <div class="tech-pillars__inner">
-      <div class="tech-pillars__header reveal">
-        <h2 class="tech-pillars__title">Core technology pillars</h2>
-      </div>
-      <div class="tech-pillars__grid">
-        <div class="tech-pillar reveal">
-          <div class="tech-pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
-          <h3 class="tech-pillar__title">Custom Hardware Design</h3>
-          <p class="tech-pillar__desc">Purpose-built Imedge® edge device powered by Ambarella CV25 SoC with 5MP camera, custom lens optics, and IP67 enclosure — designed to survive India's harshest conditions.</p>
-        </div>
-        <div class="tech-pillar reveal reveal-delay-1">
-          <div class="tech-pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <h3 class="tech-pillar__title">Perceiva™ Software</h3>
-          <p class="tech-pillar__desc">Edge-optimised perception stack with real-time sensor fusion, neural inference engine, safety runtime, and OTA update framework. Runs entirely on-device at 30 FPS.</p>
-        </div>
-        <div class="tech-pillar reveal reveal-delay-2">
-          <div class="tech-pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-          <h3 class="tech-pillar__title">India Perception Model</h3>
-          <p class="tech-pillar__desc">Foundation AI models trained exclusively on Indian road data — handling chaotic traffic, absence of lane markings, mixed vehicle types, and unpredictable pedestrian behaviour.</p>
-        </div>
-        <div class="tech-pillar reveal reveal-delay-3">
-          <div class="tech-pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3 class="tech-pillar__title">Safety Architecture</h3>
-          <p class="tech-pillar__desc">Multi-layer safety framework with redundant perception validation, deterministic watchdog timers, and fail-safe alert modes — designed for automotive-grade reliability.</p>
+        <div class="tech-split__image reveal-scale">
+          <img src="/assets/wayve/card-tech-v2.png" alt="EdgeVerse AI perception on Indian roads">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== DEEP DIVE: Imedge® ===== -->
-  <section class="tech-dive" id="imedge">
-    <div class="tech-dive__media">
+  <!-- ===== 3. COMPARISON TOGGLE — Edge AI vs Cloud AI ===== -->
+  <section class="tech-compare" id="approach">
+    <div class="tech-compare__inner">
+      <div class="tech-compare__header reveal">
+        <span class="tech-compare__eyebrow">Pioneering the Edge AI Perception Model</span>
+        <h2>EdgeVerse's Approach</h2>
+        <p>Our approach replaces the traditional cloud-dependent pipeline with a single on-device neural network that converts raw camera input into real-time safety outputs.</p>
+      </div>
+      <div class="tech-compare__tabs reveal">
+        <button class="tech-compare__tab active" data-tab="edge">Edge AI (EdgeVerse)</button>
+        <button class="tech-compare__tab" data-tab="cloud">Cloud-based (Traditional)</button>
+        <div class="tech-compare__tab-indicator"></div>
+      </div>
+      <div class="tech-compare__panels">
+        <div class="tech-compare__panel active" data-panel="edge">
+          <div class="tech-compare__diagram">
+            <div class="tech-compare__flow">
+              <div class="tech-compare__node tech-compare__node--accent">Camera Input</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node tech-compare__node--accent">On-Device AI Model</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node tech-compare__node--accent">Safety Output</div>
+            </div>
+            <div class="tech-compare__label">Single neural network · &lt;100ms latency · Zero cloud dependency</div>
+          </div>
+        </div>
+        <div class="tech-compare__panel" data-panel="cloud">
+          <div class="tech-compare__diagram">
+            <div class="tech-compare__flow">
+              <div class="tech-compare__node">Camera</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node">Detection</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node">Classification</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node">Planning</div>
+              <div class="tech-compare__arrow">→</div>
+              <div class="tech-compare__node">Alert</div>
+            </div>
+            <div class="tech-compare__label">Multiple modules · Higher latency · Cloud dependency · Expensive sensors</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. ADVANTAGES — 2×2 grid ===== -->
+  <section class="tech-advantages">
+    <div class="tech-advantages__inner">
+      <h2 class="tech-advantages__title reveal">Advantages of EdgeVerse's approach</h2>
+      <div class="tech-advantages__grid">
+        <div class="tech-advantages__row">
+          <div class="tech-advantages__card reveal">
+            <h3>Eliminates cloud dependency</h3>
+            <p>All perception runs on-device with zero network dependency. Works in tunnels, rural areas, and everywhere connectivity fails.</p>
+          </div>
+          <div class="tech-advantages__card reveal reveal-delay-1">
+            <h3>Lean hardware suite</h3>
+            <p>A single camera + edge processor replaces expensive multi-sensor setups. This data-first approach gives OEMs freedom to choose hardware based on their needs.</p>
+          </div>
+        </div>
+        <div class="tech-advantages__row">
+          <div class="tech-advantages__card reveal">
+            <h3>Mapless perception</h3>
+            <p>EdgeVerse doesn't rely on HD maps. AI-learned road geometry enables seamless expansion to new geographies through data-driven adaptations.</p>
+          </div>
+          <div class="tech-advantages__card reveal reveal-delay-1">
+            <h3>Vehicle agnostic</h3>
+            <p>Our platform adapts to any two-wheeler — from scooters to motorcycles to three-wheelers. Advances made on either vehicle type directly benefit the other.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. FLEET LEARNING — dark section, centered intro + image + 2×2 ===== -->
+  <section class="tech-fleet" id="fleet-learning">
+    <div class="tech-fleet__inner">
+      <span class="tech-fleet__eyebrow reveal">Fleet Learning Loop</span>
+      <h2 class="tech-fleet__title reveal">The data flywheel for Indian roads.</h2>
+      <p class="tech-fleet__desc reveal">Every device deployed contributes to a continuously improving perception model — trained, evaluated, and deployed through our fleet learning loop.</p>
+      <div class="tech-fleet__visual reveal-scale">
+        <img src="/assets/wayve/feature-data.png" alt="Data flywheel visualization">
+      </div>
+      <h3 class="tech-fleet__subtitle reveal">Advantages of EdgeVerse's Fleet Learning Loop</h3>
+      <div class="tech-fleet__grid">
+        <div class="tech-fleet__row">
+          <div class="tech-fleet__card reveal">
+            <h4>Powerful data-to-value engine</h4>
+            <p>Efficiently gathers real-world driving data from deployed devices, processes it in cloud training infrastructure, and converts it into refined perception capabilities.</p>
+          </div>
+          <div class="tech-fleet__card reveal reveal-delay-1">
+            <h4>Builds verifiably robust performance</h4>
+            <p>Designed to support progressive levels of rider assistance as driving data exposure builds verifiably robust perception capabilities.</p>
+          </div>
+        </div>
+        <div class="tech-fleet__row">
+          <div class="tech-fleet__card reveal">
+            <h4>Responsible model development</h4>
+            <p>Implements MLOps workflows for responsible model development, utilizing tools, processes, and pipelines to build, train, and deploy foundation models.</p>
+          </div>
+          <div class="tech-fleet__card reveal reveal-delay-1">
+            <h4>Comprehensive evaluation</h4>
+            <p>Rigorously tests AI perception models across a vast array of recorded driving scenarios for rapid and comprehensive safety evaluation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. CAPABILITIES — 2×2 image+text cards with CTA ===== -->
+  <section class="tech-caps">
+    <div class="tech-caps__inner">
+      <div class="tech-caps__header reveal">
+        <h2>Investing in core AI capabilities</h2>
+        <p>Our technology opens the door to utilizing state-of-the-art AI for enhanced training, simulation, evaluation, and validation processes.</p>
+      </div>
+      <div class="tech-caps__grid">
+        <div class="tech-caps__card reveal">
+          <div class="tech-caps__card-img">
+            <img src="/assets/wayve/card-product-v2.png" alt="Perceiva Software">
+          </div>
+          <h3>Perceiva™ Software</h3>
+          <p>Edge-optimised perception stack with real-time sensor fusion, neural inference engine, safety runtime, and OTA update framework. Runs entirely on-device at 30 FPS.</p>
+          <a href="technology.html#perceiva" class="tech-caps__btn">Perceiva™ Stack <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tech-caps__card reveal reveal-delay-1">
+          <div class="tech-caps__card-img">
+            <img src="/assets/wayve/card-safety-v2.png" alt="India Perception Model">
+          </div>
+          <h3>India Perception Model</h3>
+          <p>Foundation AI models trained exclusively on Indian road data — handling chaotic traffic, absence of lane markings, mixed vehicle types, and unpredictable pedestrian behaviour.</p>
+          <a href="safety.html" class="tech-caps__btn">Safety Framework <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tech-caps__card reveal">
+          <div class="tech-caps__card-img">
+            <img src="/assets/wayve/feature-universal.png" alt="Neural Simulator">
+          </div>
+          <h3>Neural Simulator</h3>
+          <p>Photorealistic scenario generation enables us to automatically create thousands of simulated Indian road scenarios to train, test, and validate our AI models at scale.</p>
+          <a href="#" class="tech-caps__btn">Simulation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="tech-caps__card reveal reveal-delay-1">
+          <div class="tech-caps__card-img">
+            <img src="/assets/wayve/feature-mapless.png" alt="Model Introspection">
+          </div>
+          <h3>Safety Architecture</h3>
+          <p>Multi-layer safety framework with redundant perception validation, deterministic watchdog timers, and fail-safe alert modes — designed for automotive-grade reliability.</p>
+          <a href="safety.html" class="tech-caps__btn">Safety 2.0 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. DEEP DIVE SPLIT — Imedge Hardware ===== -->
+  <section class="tech-deepdive" id="imedge">
+    <div class="tech-deepdive__image">
       <img src="/assets/investors/tech-product.png" alt="Imedge hardware platform">
     </div>
-    <div class="tech-dive__content reveal">
-      <span class="tech-dive__eyebrow">Imedge® Hardware</span>
-      <h2 class="tech-dive__title">Edge AI vision, built from first principles.</h2>
-      <p class="tech-dive__desc">A compact, weather-sealed device that houses the Ambarella CV25 vision processor, 5MP camera module, and custom optics. Designed for vibration-heavy two-wheeler environments where reliability is non-negotiable.</p>
-      <div class="tech-dive__specs">
-        <div><span class="tech-dive__spec-val">CV25</span><span class="tech-dive__spec-label">Ambarella SoC</span></div>
-        <div><span class="tech-dive__spec-val">&lt;2W</span><span class="tech-dive__spec-label">Power draw</span></div>
-        <div><span class="tech-dive__spec-val">5MP</span><span class="tech-dive__spec-label">Camera resolution</span></div>
-        <div><span class="tech-dive__spec-val">IP67</span><span class="tech-dive__spec-label">Weather rating</span></div>
-      </div>
+    <div class="tech-deepdive__content reveal">
+      <h2>Imedge® Hardware</h2>
+      <p>A compact, weather-sealed device housing the Ambarella CV25 vision processor, 5MP camera module, and custom optics. Purpose-built for vibration-heavy two-wheeler environments where reliability is non-negotiable.</p>
+      <p><a href="product.html" class="tech-deepdive__link">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></p>
     </div>
   </section>
 
-  <!-- ===== DEEP DIVE: Perceiva™ ===== -->
-  <section class="tech-dive tech-dive--reverse tech-dive--dark" id="perceiva">
-    <div class="tech-dive__content reveal">
-      <span class="tech-dive__eyebrow">Perceiva™ Software</span>
-      <h2 class="tech-dive__title">Real-time perception that learns and adapts.</h2>
-      <p class="tech-dive__desc">A multi-task neural inference engine running object detection, depth estimation, road segmentation, and multi-object tracking simultaneously — all at 30 FPS on the edge with zero cloud dependency.</p>
-      <div class="tech-dive__specs">
-        <div><span class="tech-dive__spec-val">30 FPS</span><span class="tech-dive__spec-label">Inference speed</span></div>
-        <div><span class="tech-dive__spec-val">100%</span><span class="tech-dive__spec-label">On-device</span></div>
-        <div><span class="tech-dive__spec-val">4</span><span class="tech-dive__spec-label">Concurrent AI tasks</span></div>
-        <div><span class="tech-dive__spec-val">OTA</span><span class="tech-dive__spec-label">Remote updates</span></div>
-      </div>
+  <!-- ===== 8. DEEP DIVE SPLIT — Perceiva Software ===== -->
+  <section class="tech-deepdive tech-deepdive--reverse tech-deepdive--dark" id="perceiva">
+    <div class="tech-deepdive__content reveal">
+      <h2>Perceiva™ Software</h2>
+      <p>A multi-task neural inference engine running object detection, depth estimation, road segmentation, and multi-object tracking simultaneously — all at 30 FPS on the edge with zero cloud dependency.</p>
+      <p><a href="product.html" class="tech-deepdive__link">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></p>
     </div>
-    <div class="tech-dive__media">
+    <div class="tech-deepdive__image">
       <img src="/assets/wayve/card-tech.png" alt="Neural network visualization">
-    </div>
-  </section>
-
-  <!-- ===== DATA FLYWHEEL ===== -->
-  <section class="tech-flywheel">
-    <div class="tech-flywheel__inner">
-      <span class="tech-flywheel__eyebrow reveal">Fleet Learning Loop</span>
-      <h2 class="tech-flywheel__title reveal">The data flywheel for Indian roads.</h2>
-      <p class="tech-flywheel__desc reveal">Every device deployed contributes to a continuously improving perception model — trained, evaluated, and deployed through our fleet learning loop.</p>
-      <div class="tech-flywheel__steps">
-        <div class="tech-flywheel__step reveal">
-          <div class="tech-flywheel__step-num">01</div>
-          <h3 class="tech-flywheel__step-title">Capture</h3>
-          <p class="tech-flywheel__step-desc">Real-world frames collected from deployed Imedge® devices across diverse Indian road conditions.</p>
-        </div>
-        <div class="tech-flywheel__step reveal reveal-delay-1">
-          <div class="tech-flywheel__step-num">02</div>
-          <h3 class="tech-flywheel__step-title">Train</h3>
-          <p class="tech-flywheel__step-desc">Foundation models retrained on labelled edge cases and rare scenarios to expand perception coverage.</p>
-        </div>
-        <div class="tech-flywheel__step reveal reveal-delay-2">
-          <div class="tech-flywheel__step-num">03</div>
-          <h3 class="tech-flywheel__step-title">Evaluate</h3>
-          <p class="tech-flywheel__step-desc">Automated test suites validate safety and accuracy on thousands of recorded scenarios before deployment.</p>
-        </div>
-        <div class="tech-flywheel__step reveal reveal-delay-3">
-          <div class="tech-flywheel__step-num">04</div>
-          <h3 class="tech-flywheel__step-title">Deploy</h3>
-          <p class="tech-flywheel__step-desc">Updated models pushed via OTA to every device in the fleet — every vehicle gets smarter over time.</p>
-        </div>
-      </div>
     </div>
   </section>
 

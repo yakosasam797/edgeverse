@@ -1,9 +1,9 @@
 /* ============================================
-   PRODUCT PAGE — Wayve-Style
+   PRODUCT PAGE — Wayve-Style Layout
    Perceiva™ ARAS Platform
    ============================================ */
 
-/* ===== HERO ===== */
+/* ===== 1. HERO ===== */
 .prod-hero {
   position: relative;
   min-height: 90vh;
@@ -91,51 +91,100 @@
 }
 
 .prod-hero__cta:hover {
-  background: var(--accent-dark);
+  background: var(--accent-hover);
   gap: 14px;
 }
 
-/* ===== INTRO STATEMENT ===== */
-.prod-statement {
+/* ===== 2. STATEMENT + SPLIT ===== */
+.prod-split {
   padding: var(--space-5xl) var(--page-padding);
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
-.prod-statement__inner {
+.prod-split__inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  text-align: center;
 }
 
-.prod-statement__text {
+.prod-split__header {
+  margin-bottom: var(--space-4xl);
+}
+
+.prod-split__header h2 {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3.5vw, 42px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.4;
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   color: var(--text-primary);
-  max-width: 900px;
-  margin: 0 auto;
+  margin-bottom: var(--space-xl);
+  max-width: 800px;
 }
 
-/* ===== CAPABILITIES — Alternating splits ===== */
-.prod-capability {
+.prod-split__header p {
+  font-size: clamp(16px, 1.5vw, 20px);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.prod-split__body {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 400px;
+  gap: var(--space-3xl);
+  align-items: center;
 }
 
-.prod-capability--reverse .prod-capability__media { order: 1; }
-.prod-capability--reverse .prod-capability__content { order: 2; }
+.prod-split__points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
 
-.prod-capability__media {
+.prod-split__point h3 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.prod-split__point p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.prod-split__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.prod-split__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== 4. CAPABILITY DEEP DIVES — alternating splits ===== */
+.prod-dive {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 450px;
+}
+
+.prod-dive--reverse .prod-dive__image { order: 1; }
+.prod-dive--reverse .prod-dive__content { order: 2; }
+
+.prod-dive__image {
   position: relative;
   min-height: 300px;
   overflow: hidden;
   background: var(--bg-tertiary);
 }
 
-.prod-capability__media img {
+.prod-dive__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -143,13 +192,7 @@
   inset: 0;
 }
 
-/* Gradient placeholder for demo */
-.prod-capability__media--grad-1 { background: linear-gradient(135deg, #0F172A 0%, #0D9488 100%); }
-.prod-capability__media--grad-2 { background: linear-gradient(135deg, #134E4A 0%, #0F172A 100%); }
-.prod-capability__media--grad-3 { background: linear-gradient(135deg, #0F172A 0%, #155E75 100%); }
-.prod-capability__media--grad-4 { background: linear-gradient(135deg, #164E63 0%, #0F172A 100%); }
-
-.prod-capability__content {
+.prod-dive__content {
   padding: var(--space-3xl) var(--page-padding);
   display: flex;
   flex-direction: column;
@@ -157,12 +200,12 @@
   background: var(--bg-primary);
 }
 
-.prod-capability--dark .prod-capability__content {
+.prod-dive--dark .prod-dive__content {
   background: var(--navy);
   color: #fff;
 }
 
-.prod-capability__num {
+.prod-dive__num {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 48px;
@@ -172,11 +215,12 @@
   margin-bottom: var(--space-md);
 }
 
-.prod-capability--dark .prod-capability__num {
+.prod-dive--dark .prod-dive__num {
   color: rgba(255,255,255,0.05);
 }
 
-.prod-capability__eyebrow {
+.prod-dive__eyebrow {
+  display: block;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -185,11 +229,11 @@
   margin-bottom: var(--space-lg);
 }
 
-.prod-capability--dark .prod-capability__eyebrow {
+.prod-dive--dark .prod-dive__eyebrow {
   color: var(--accent-light);
 }
 
-.prod-capability__title {
+.prod-dive__content h2 {
   font-family: var(--font-display);
   font-size: clamp(24px, 3.5vw, 40px);
   font-weight: 700;
@@ -199,9 +243,9 @@
   margin-bottom: var(--space-lg);
 }
 
-.prod-capability--dark .prod-capability__title { color: #fff; }
+.prod-dive--dark .prod-dive__content h2 { color: #fff; }
 
-.prod-capability__desc {
+.prod-dive__content > p {
   font-size: clamp(15px, 1.3vw, 17px);
   color: var(--text-secondary);
   line-height: 1.75;
@@ -209,17 +253,18 @@
   margin-bottom: var(--space-xl);
 }
 
-.prod-capability--dark .prod-capability__desc {
+.prod-dive--dark .prod-dive__content > p {
   color: rgba(255,255,255,0.55);
 }
 
-.prod-capability__stat-row {
+.prod-dive__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
 }
 
-.prod-capability__stat-val {
+.prod-dive__stat-val {
+  display: block;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(24px, 3vw, 36px);
@@ -228,21 +273,22 @@
   color: var(--accent);
 }
 
-.prod-capability--dark .prod-capability__stat-val {
+.prod-dive--dark .prod-dive__stat-val {
   color: var(--accent-light);
 }
 
-.prod-capability__stat-label {
+.prod-dive__stat-label {
+  display: block;
   font-size: 12px;
   color: var(--text-muted);
   margin-top: 4px;
 }
 
-.prod-capability--dark .prod-capability__stat-label {
+.prod-dive--dark .prod-dive__stat-label {
   color: rgba(255,255,255,0.35);
 }
 
-/* ===== APPLICATIONS — Use case grid ===== */
+/* ===== 5. APPLICATIONS ===== */
 .prod-apps {
   padding: var(--space-5xl) var(--page-padding);
   background: var(--bg-secondary);
@@ -255,10 +301,9 @@
 
 .prod-apps__header {
   margin-bottom: var(--space-3xl);
-  text-align: center;
 }
 
-.prod-apps__title {
+.prod-apps__header h2 {
   font-family: var(--font-display);
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 700;
@@ -267,11 +312,10 @@
   margin-bottom: var(--space-md);
 }
 
-.prod-apps__sub {
+.prod-apps__header p {
   font-size: 17px;
   color: var(--text-secondary);
   max-width: 600px;
-  margin: 0 auto;
   line-height: 1.65;
 }
 
@@ -287,6 +331,8 @@
   border-radius: var(--radius-xl);
   padding: var(--space-2xl);
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
 }
 
 .prod-app-card:hover {
@@ -312,7 +358,7 @@
   height: 24px;
 }
 
-.prod-app-card__title {
+.prod-app-card h3 {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 20px;
@@ -320,21 +366,43 @@
   margin-bottom: var(--space-md);
 }
 
-.prod-app-card__desc {
+.prod-app-card p {
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.7;
+  flex: 1;
+  margin-bottom: var(--space-lg);
 }
 
-/* ===== CTA ===== */
+.prod-app-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: all var(--transition-base);
+}
+
+.prod-app-card__btn svg {
+  transition: transform var(--transition-base);
+}
+
+.prod-app-card__btn:hover {
+  color: var(--accent-hover);
+}
+
+.prod-app-card__btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ===== 6. CTA ===== */
 .prod-cta {
   padding: var(--space-5xl) var(--page-padding);
   background: var(--accent);
   color: #fff;
   text-align: center;
 }
-
-html[data-theme="dark"] .prod-cta { background: #0F766E; }
 
 .prod-cta__inner {
   max-width: 700px;
@@ -378,11 +446,15 @@ html[data-theme="dark"] .prod-cta { background: #0F766E; }
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 768px) {
-  .prod-capability {
+  .prod-split__body {
     grid-template-columns: 1fr 1fr;
   }
 
-  .prod-capability__content {
+  .prod-dive {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .prod-dive__content {
     padding: var(--space-4xl);
   }
 
@@ -392,7 +464,7 @@ html[data-theme="dark"] .prod-cta { background: #0F766E; }
 }
 
 @media (min-width: 1024px) {
-  .prod-capability__content {
+  .prod-dive__content {
     padding: var(--space-5xl);
   }
 }

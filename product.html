@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== 1. HERO ===== -->
   <section class="prod-hero">
     <div class="prod-hero__media">
       <img src="/assets/wayve/product-hero.png" alt="Motorcycle with AI perception overlay">
@@ -50,101 +50,148 @@
     </div>
   </section>
 
-  <!-- ===== STATEMENT ===== -->
-  <section class="prod-statement">
-    <div class="prod-statement__inner reveal">
-      <p class="prod-statement__text">Perceiva™ ARAS software learns to perceive using data, equipping vehicles with advanced human-like awareness. Designed for safety, it adapts to unexpected and unseen situations across India's most challenging roads.</p>
-    </div>
-  </section>
-
-  <!-- ===== CAPABILITY 1: Forward Collision Warning ===== -->
-  <section class="prod-capability" id="capabilities">
-    <div class="prod-capability__media prod-capability__media--grad-1"></div>
-    <div class="prod-capability__content reveal">
-      <span class="prod-capability__num">01</span>
-      <span class="prod-capability__eyebrow">Forward Collision Warning</span>
-      <h2 class="prod-capability__title">See what's ahead. React before it's too late.</h2>
-      <p class="prod-capability__desc">Multi-sensor fusion detects vehicles, pedestrians, and obstacles up to 100 meters ahead. The system alerts the rider with visual and haptic warnings before a collision becomes inevitable.</p>
-      <div class="prod-capability__stat-row">
-        <div><span class="prod-capability__stat-val">100m</span><span class="prod-capability__stat-label">Detection range</span></div>
-        <div><span class="prod-capability__stat-val">&lt;100ms</span><span class="prod-capability__stat-label">Alert latency</span></div>
+  <!-- ===== 2. STATEMENT + SPLIT ===== -->
+  <section class="prod-split">
+    <div class="prod-split__inner">
+      <div class="prod-split__header reveal">
+        <h2>Perceiva™ ARAS learns to perceive using data</h2>
+        <p>Equipping vehicles with advanced human-like awareness. Designed for safety, it adapts to unexpected and unseen situations across India's most challenging roads.</p>
+      </div>
+      <div class="prod-split__body">
+        <div class="prod-split__points">
+          <div class="prod-split__point reveal">
+            <h3>Real-time perception</h3>
+            <p>Multi-task neural inference engine running object detection, depth estimation, road segmentation, and multi-object tracking simultaneously — all at 30 FPS on the edge.</p>
+          </div>
+          <div class="prod-split__point reveal reveal-delay-1">
+            <h3>Zero cloud dependency</h3>
+            <p>Everything runs on-device. No network latency, no data costs, no connectivity issues. Works everywhere — tunnels, highways, rural roads.</p>
+          </div>
+          <div class="prod-split__point reveal reveal-delay-2">
+            <h3>OEM-ready integration</h3>
+            <p>White-label Perceiva™ SDK for direct integration into instrument clusters and ECUs. Pre-certified for BIS compliance with plug-and-play OEM APIs.</p>
+          </div>
+        </div>
+        <div class="prod-split__image reveal-scale">
+          <img src="/assets/wayve/card-product-v2.png" alt="Perceiva ARAS Platform">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CAPABILITY 2: Blind Spot Detection ===== -->
-  <section class="prod-capability prod-capability--reverse prod-capability--dark">
-    <div class="prod-capability__content reveal">
-      <span class="prod-capability__num">02</span>
-      <span class="prod-capability__eyebrow">Blind Spot Detection</span>
-      <h2 class="prod-capability__title">360° awareness for every lane change.</h2>
-      <p class="prod-capability__desc">Peripheral perception monitors adjacent lanes and blind zones. When a vehicle enters the danger zone, the system provides instant directional alerts to prevent side-swipe collisions.</p>
-      <div class="prod-capability__stat-row">
-        <div><span class="prod-capability__stat-val">170°</span><span class="prod-capability__stat-label">Field of view</span></div>
-        <div><span class="prod-capability__stat-val">24/7</span><span class="prod-capability__stat-label">Day & night operation</span></div>
+  <!-- ===== 3. BENTO CARDS — 3 rounded cards (matching homepage wayve style) ===== -->
+  <article class="w-bento" id="capabilities">
+    <div class="w-bento__grid">
+      <a href="#fcw" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-product-v2.png" alt="Forward Collision Warning"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Forward Collision Warning</h3>
+          <p>Detects vehicles, pedestrians, and obstacles up to 100 meters ahead with real-time visual and haptic alerts.</p>
+          <span class="w-bento__btn">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="#bsd" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-tech-v2.png" alt="Blind Spot Detection"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Blind Spot Detection</h3>
+          <p>360° awareness monitors adjacent lanes and blind zones, providing instant directional alerts.</p>
+          <span class="w-bento__btn">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+      <a href="#ldw" class="w-bento__card">
+        <div class="w-bento__card-bg"><img src="/assets/wayve/card-safety-v2.png" alt="Lane Departure Warning"></div>
+        <div class="w-bento__card-overlay"></div>
+        <div class="w-bento__card-body">
+          <h3>Lane & Speed Advisory</h3>
+          <p>AI-learned road geometry and context-aware speed intelligence — even without lane markings.</p>
+          <span class="w-bento__btn">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </article>
+
+  <!-- ===== 4. CAPABILITY DEEP DIVES — alternating image+text splits ===== -->
+  <section class="prod-dive" id="fcw">
+    <div class="prod-dive__image">
+      <img src="/assets/wayve/feature-safety.png" alt="Forward collision warning visualization">
+    </div>
+    <div class="prod-dive__content reveal">
+      <span class="prod-dive__num">01</span>
+      <span class="prod-dive__eyebrow">Forward Collision Warning</span>
+      <h2>See what's ahead. React before it's too late.</h2>
+      <p>Multi-sensor fusion detects vehicles, pedestrians, and obstacles up to 100 meters ahead. The system alerts the rider with visual and haptic warnings before a collision becomes inevitable.</p>
+      <div class="prod-dive__stats">
+        <div><span class="prod-dive__stat-val">100m</span><span class="prod-dive__stat-label">Detection range</span></div>
+        <div><span class="prod-dive__stat-val">&lt;100ms</span><span class="prod-dive__stat-label">Alert latency</span></div>
       </div>
     </div>
-    <div class="prod-capability__media prod-capability__media--grad-2"></div>
   </section>
 
-  <!-- ===== CAPABILITY 3: Lane Departure Warning ===== -->
-  <section class="prod-capability">
-    <div class="prod-capability__media prod-capability__media--grad-3"></div>
-    <div class="prod-capability__content reveal">
-      <span class="prod-capability__num">03</span>
-      <span class="prod-capability__eyebrow">Lane Departure Warning</span>
-      <h2 class="prod-capability__title">Stay in lane. Stay alive.</h2>
-      <p class="prod-capability__desc">Even on Indian roads where lane markings are faded or non-existent, Perceiva™ infers road boundaries using AI-learned road geometry and alerts riders when they drift dangerously.</p>
-      <div class="prod-capability__stat-row">
-        <div><span class="prod-capability__stat-val">No Maps</span><span class="prod-capability__stat-label">Required for operation</span></div>
-        <div><span class="prod-capability__stat-val">Real-Time</span><span class="prod-capability__stat-label">Road boundary inference</span></div>
+  <section class="prod-dive prod-dive--reverse prod-dive--dark" id="bsd">
+    <div class="prod-dive__content reveal">
+      <span class="prod-dive__num">02</span>
+      <span class="prod-dive__eyebrow">Blind Spot Detection</span>
+      <h2>360° awareness for every lane change.</h2>
+      <p>Peripheral perception monitors adjacent lanes and blind zones. When a vehicle enters the danger zone, the system provides instant directional alerts to prevent side-swipe collisions.</p>
+      <div class="prod-dive__stats">
+        <div><span class="prod-dive__stat-val">170°</span><span class="prod-dive__stat-label">Field of view</span></div>
+        <div><span class="prod-dive__stat-val">24/7</span><span class="prod-dive__stat-label">Day & night operation</span></div>
+      </div>
+    </div>
+    <div class="prod-dive__image">
+      <img src="/assets/wayve/feature-universal.png" alt="Blind spot detection">
+    </div>
+  </section>
+
+  <section class="prod-dive" id="ldw">
+    <div class="prod-dive__image">
+      <img src="/assets/wayve/feature-mapless.png" alt="Lane departure and speed advisory">
+    </div>
+    <div class="prod-dive__content reveal">
+      <span class="prod-dive__num">03</span>
+      <span class="prod-dive__eyebrow">Lane Departure + Speed Advisory</span>
+      <h2>Stay in lane. Stay alive.</h2>
+      <p>Even on Indian roads where lane markings are faded or non-existent, Perceiva™ infers road boundaries using AI-learned road geometry and analyses traffic density for real-time speed advisories.</p>
+      <div class="prod-dive__stats">
+        <div><span class="prod-dive__stat-val">No Maps</span><span class="prod-dive__stat-label">Required for operation</span></div>
+        <div><span class="prod-dive__stat-val">30 FPS</span><span class="prod-dive__stat-label">Continuous analysis</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CAPABILITY 4: Adaptive Speed Advisory ===== -->
-  <section class="prod-capability prod-capability--reverse prod-capability--dark">
-    <div class="prod-capability__content reveal">
-      <span class="prod-capability__num">04</span>
-      <span class="prod-capability__eyebrow">Adaptive Speed Advisory</span>
-      <h2 class="prod-capability__title">Context-aware speed intelligence.</h2>
-      <p class="prod-capability__desc">The system analyses road type, traffic density, weather conditions, and surrounding vehicle speeds to provide real-time speed advisories — reducing over-speeding by up to 40%.</p>
-      <div class="prod-capability__stat-row">
-        <div><span class="prod-capability__stat-val">30 FPS</span><span class="prod-capability__stat-label">Continuous analysis</span></div>
-        <div><span class="prod-capability__stat-val">40%</span><span class="prod-capability__stat-label">Speed violation reduction</span></div>
-      </div>
-    </div>
-    <div class="prod-capability__media prod-capability__media--grad-4"></div>
-  </section>
-
-  <!-- ===== APPLICATIONS ===== -->
+  <!-- ===== 5. APPLICATIONS — 2×2 capability image+text cards ===== -->
   <section class="prod-apps" id="oem">
     <div class="prod-apps__inner">
       <div class="prod-apps__header reveal">
-        <h2 class="prod-apps__title">Built for every deployment model</h2>
-        <p class="prod-apps__sub">From OEM integration to fleet management, Perceiva™ scales across every use case in the two-wheeler ecosystem.</p>
+        <h2>Built for every deployment model</h2>
+        <p>From OEM integration to fleet management, Perceiva™ scales across every use case in the two-wheeler ecosystem.</p>
       </div>
       <div class="prod-apps__grid">
         <div class="prod-app-card reveal">
           <div class="prod-app-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <h3 class="prod-app-card__title">OEM Integration</h3>
-          <p class="prod-app-card__desc">White-label Perceiva™ SDK for direct integration into instrument clusters and ECUs. Pre-certified for BIS compliance with plug-and-play OEM APIs.</p>
+          <h3>OEM Integration</h3>
+          <p>White-label Perceiva™ SDK for direct integration into instrument clusters and ECUs. Pre-certified for BIS compliance.</p>
+          <a href="contact.html" class="prod-app-card__btn">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="prod-app-card reveal reveal-delay-1">
           <div class="prod-app-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3 class="prod-app-card__title">Fleet Management</h3>
-          <p class="prod-app-card__desc">Cloud-connected fleet intelligence with real-time driver behaviour scoring, route safety analytics, and predictive risk assessment for commercial fleets.</p>
+          <h3>Fleet Management</h3>
+          <p>Cloud-connected fleet intelligence with real-time driver behaviour scoring, route safety analytics, and predictive risk assessment.</p>
+          <a href="contact.html" class="prod-app-card__btn">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
         <div class="prod-app-card reveal reveal-delay-2">
           <div class="prod-app-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-          <h3 class="prod-app-card__title">Aftermarket Retrofit</h3>
-          <p class="prod-app-card__desc">Standalone Imedge® device for retrofitting existing two-wheelers. Universal mount system compatible with 95% of India's two-wheeler fleet. Install in under 30 minutes.</p>
+          <h3>Aftermarket Retrofit</h3>
+          <p>Standalone Imedge® device for retrofitting existing two-wheelers. Universal mount system compatible with 95% of India's fleet.</p>
+          <a href="contact.html" class="prod-app-card__btn">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- ===== 6. CTA ===== -->
   <section class="prod-cta">
     <div class="prod-cta__inner reveal">
       <h2 class="prod-cta__title">Ready to make riding safer?</h2>
