@@ -204,200 +204,171 @@
   }
 }
 
+/* =============================================
+   4. SHOWCASE — Full-bleed feature tabs
+   ============================================= */
+.w-showcase {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #0a0a12;
+}
+.w-showcase__slides { position: absolute; inset: 0; }
+.w-showcase__slide {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.w-showcase__slide.active { opacity: 1; }
+.w-showcase__slide img { width: 100%; height: 100%; object-fit: cover; }
 
+.w-showcase__gradient {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(to right, rgba(10,10,18,.82) 0%, rgba(10,10,18,.4) 35%, transparent 65%),
+    linear-gradient(to top, rgba(10,10,18,.55) 0%, transparent 35%);
+}
 
-/* 4. FEATURES */
-.w-features {
-  background: #0f0f14; color: #fff;
-  padding: clamp(80px,10vw,140px) var(--page-padding);
+.w-showcase__content {
+  position: relative; z-index: 2;
+  padding: 0 var(--page-padding) clamp(48px, 7vw, 80px);
+  max-width: var(--container-max); width: 100%; margin: 0 auto;
 }
-.w-features__wrap {
-  max-width: var(--container-max); margin: 0 auto;
-  display: grid; grid-template-columns: 1fr; gap: 32px;
+.w-showcase__list {
+  border-left: 2px solid rgba(255,255,255,.15);
+  padding-left: clamp(16px, 2vw, 28px);
+  max-width: 400px;
 }
-.w-features__left { display: flex; flex-direction: column; }
-.w-features__item {
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  cursor: pointer;
+.w-showcase__item {
+  padding: 10px 0; cursor: pointer;
+  transition: all .35s ease;
 }
-.w-features__item:first-child { border-top: 1px solid rgba(255,255,255,.06); }
-.w-features__progress {
-  height: 2px; background: rgba(255,255,255,.04);
-  margin-bottom: 18px; border-radius: 1px; overflow: hidden;
+.w-showcase__dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.35);
+  margin-right: 12px; vertical-align: middle;
+  flex-shrink: 0; transition: all .3s ease;
 }
-.w-features__progress div {
-  height: 100%; width: 0;
-  background: var(--accent-light); border-radius: 1px;
+.w-showcase__item.active .w-showcase__dot { display: none; }
+.w-showcase__name {
+  color: rgba(255,255,255,.4);
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 500;
+  vertical-align: middle;
+  transition: all .35s ease;
 }
-.w-features__pill {
-  display: inline-block; padding: 8px 22px;
-  border-radius: var(--radius-full);
-  font-size: 15px; font-weight: 600;
-  color: rgba(255,255,255,.35);
-  border: 1px solid rgba(255,255,255,.08);
-  transition: all .3s ease; margin-bottom: 4px;
+.w-showcase__item.active .w-showcase__name {
+  display: inline-block;
+  background: rgba(18,20,28,.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 7px 20px; border-radius: 20px;
+  color: #fff; font-size: 14px; font-weight: 600;
+  letter-spacing: .01em;
 }
-.w-features__item.active .w-features__pill {
-  background: #fff; color: #0f0f14; border-color: #fff;
+.w-showcase__desc {
+  max-height: 0; opacity: 0; overflow: hidden;
+  color: rgba(255,255,255,.6);
+  font-size: 14px; line-height: 1.7; margin: 0;
+  transition: max-height .5s ease, opacity .4s ease, margin .4s ease;
 }
-.w-features__desc {
-  max-height: 0; overflow: hidden; opacity: 0;
-  transition: max-height .4s ease, opacity .3s ease;
+.w-showcase__item.active .w-showcase__desc {
+  max-height: 200px; opacity: 1; margin: 14px 0 6px;
 }
-.w-features__item.active .w-features__desc { max-height: 140px; opacity: 1; }
-.w-features__desc p {
-  font-size: 15px; color: rgba(255,255,255,.4);
-  line-height: 1.65; padding-top: 12px;
+.w-showcase__bar { height: 0; overflow: hidden; transition: height .3s ease; }
+.w-showcase__item.active .w-showcase__bar {
+  height: 2px; background: rgba(255,255,255,.08);
+  border-radius: 1px; margin-top: 10px;
 }
-.w-features__right {
-  position: relative; border-radius: var(--radius-xl);
-  overflow: hidden; background: #1a1a22; aspect-ratio: 16/10;
+.w-showcase__bar div {
+  height: 100%; background: rgba(255,255,255,.5);
+  border-radius: 1px; width: 0;
 }
-.w-features__slide {
-  position: absolute; inset: 0; opacity: 0;
-  transition: opacity .6s ease;
-}
-.w-features__slide.active { opacity: 1; }
-.w-features__slide img { width: 100%; height: 100%; object-fit: cover; }
+
 @media(min-width:768px) {
-  .w-features__wrap {
-    grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: start;
-  }
-  .w-features__left { position: sticky; top: 100px; }
+  .w-showcase__content { padding-bottom: clamp(60px, 8vw, 100px); }
+  .w-showcase__list { padding-left: 28px; }
 }
 @media(min-width:1024px) {
-  .w-features__wrap { grid-template-columns: 1fr 1.5fr; gap: 72px; }
-  .w-features__pill { font-size: 16px; }
+  .w-showcase__list { max-width: 420px; }
 }
 
 /* =============================================
-   5. BRANDS — Wayve-exact large logo grid
+   5. INVESTORS — heading + scrolling logo marquee
    ============================================= */
 .w-brands {
-  padding: clamp(80px, 10vw, 160px) 0;
-  background: #fff;
+  padding: clamp(80px, 10vw, 160px) 0 clamp(40px, 5vw, 80px);
+  background: #fff; overflow: hidden;
 }
 .w-brands__inner {
   max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 var(--page-padding);
+  margin: 0 auto; padding: 0 var(--page-padding);
 }
 .w-brands__head {
-  margin-bottom: clamp(48px, 6vw, 80px);
+  margin-bottom: clamp(40px, 5vw, 64px);
   max-width: 520px;
 }
 .w-brands__head h2 {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 500;
-  letter-spacing: -.03em;
-  color: var(--gray-900);
-  line-height: 1.15;
-  margin-bottom: 20px;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 500; letter-spacing: -.03em;
+  color: #1a1a2e; line-height: 1.1; margin-bottom: 20px;
 }
 .w-brands__head p {
-  font-size: 15px;
-  color: var(--gray-400);
-  line-height: 1.7;
-  max-width: 460px;
+  font-size: 15px; color: var(--gray-400);
+  line-height: 1.7; max-width: 460px; margin-bottom: 28px;
 }
-
-/* Logo grid — wayve-style centered layout */
-.w-brands__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  align-items: center;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
+.w-brands__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; background: #1a1a2e; color: #fff;
+  font-size: 14px; font-weight: 600;
+  border-radius: var(--radius-full);
+  text-decoration: none; transition: all .3s ease;
 }
-
-.w-brands__logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(28px, 4vw, 48px) clamp(16px, 3vw, 40px);
-  width: 100%;
-  transition: opacity .3s ease;
+.w-brands__btn:hover {
+  background: #2d2d44; transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26,26,46,.2);
 }
-.w-brands__logo-item:hover { opacity: 0.6; }
+.w-brands__btn svg { transition: transform .3s ease; }
+.w-brands__btn:hover svg { transform: translateX(3px); }
 
-/* SVG text logos — large, monochrome, clean */
-.w-brands__logo-item svg {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  display: block;
+.w-brands__marquee {
+  overflow: hidden;
+  margin: 0 calc(var(--page-padding) * -1);
+  padding: 32px 0 16px;
 }
+.w-brands__track {
+  display: flex; align-items: center;
+  gap: clamp(48px, 6vw, 80px);
+  animation: brand-scroll 25s linear infinite;
+  width: max-content; will-change: transform;
+}
+.w-brands__track:hover { animation-play-state: paused; }
 
-/* Text-based logo styling */
 .w-brands__logo-text {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(24px, 3.5vw, 42px);
-  color: var(--gray-900);
-  letter-spacing: -.02em;
-  text-align: center;
-  line-height: 1;
-  user-select: none;
-  white-space: nowrap;
+  font-size: clamp(26px, 3.5vw, 40px);
+  color: #1a1a2e; white-space: nowrap;
+  user-select: none; flex-shrink: 0;
+  transition: opacity .3s ease;
 }
-
-/* Specific logo style overrides */
-.w-brands__logo-text--light {
-  font-weight: 400;
-  letter-spacing: 0.04em;
-}
-.w-brands__logo-text--medium {
-  font-weight: 600;
-}
+.w-brands__logo-text:hover { opacity: .5; }
+.w-brands__logo-text--light { font-weight: 400; letter-spacing: .03em; }
+.w-brands__logo-text--medium { font-weight: 600; }
 .w-brands__logo-text--caps {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: clamp(18px, 2.5vw, 30px);
-}
-.w-brands__logo-text--serif {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: 700;
-  font-style: italic;
+  text-transform: uppercase; letter-spacing: .1em;
+  font-size: clamp(20px, 2.5vw, 28px);
 }
 
-/* CTA below logos */
-.w-brands__action {
-  text-align: center;
-  margin-top: clamp(48px, 6vw, 80px);
-}
-.w-brands__btn {
-  display: inline-flex;
-  padding: 14px 44px;
-  background: var(--gray-900);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: var(--radius-full);
-  border: none;
-  text-decoration: none;
-  transition: all .3s ease;
-}
-.w-brands__btn:hover {
-  background: var(--gray-700);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+@keyframes brand-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-@media(min-width:600px) {
-  .w-brands__grid { grid-template-columns: repeat(3, 1fr); }
-}
-@media(min-width:900px) {
-  .w-brands__grid { grid-template-columns: repeat(3, 1fr); }
-  .w-brands__logo-text { font-size: clamp(28px, 3vw, 42px); }
-  .w-brands__logo-text--caps { font-size: clamp(20px, 2vw, 28px); }
-}
-@media(min-width:1200px) {
-  .w-brands__grid { grid-template-columns: repeat(4, 1fr); }
-}
 
 /* =============================================
    6. NEWS — Wayve-exact asymmetric grid
